@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+// Import VIUR CSS
+@import "../../node_modules/viur-ignite-css/less/viur.less";
+
+
+// ---------------------------------------------------------------------------------------
+//    APPCONFIGURATION
+// ---------------------------------------------------------------------------------------
+
+// Here you can configure the styling with global variables.
+
+// Color and Shadow Sets
+@mainColor: #d00f1c; // The corporate color - defining most of the looks.
+@complementColor: #333; // A color used to sit next to the maincolor.
+@textColor: #222;
+@invTextColor: #f4f4f4;
+@backgroundColor: #fafafa;
+
+@successColor: #4cad42; // Green
+@warnColor: #f5b639; // Orange
+@failColor: #f44336; // Red
+@hintColor: #1da7e0; // Blue
+ 
+@defaultShadow: 1px 2px 3px rgba(0,0,0,0.3);
+
+// Font Stacks
+@bodyFonts: 'Source Sans Pro', 'Open Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; // Default font stack.
+@headFonts: 'Source Sans Pro', 'Open Sans', sans-serif; // Fonts for headlines, blockquotes and alike.
+@monoFonts: Courier, monospace; // Fonts for code pieces.
+
+// Put your custom color, shadow and font overwrites here. Try this:
+// @btnDangerBgColor: orange;
+
+// Width and Media Queries
+@pageWidth: 1300px; // max-width of the centered container.
+
+@breakSmall: 900px; // smart phones
+@breakMedium: 1100px; // tablets
+@breakLarge: 1400px; // screens
+@break2x: 192dpi; // high-density displays
+@breakPrint: print; // make it printable!
+
+
+
+/* ---------------------------------------------------------------------------------------
+	#PROJECTSPECIFIC ELEMENTS
+	--------------------------------------------------------------------------------------- */
+
+// Put all your custom CSS down here!
+// But start new LESS files for major components.
+
+
+
+
+.sandbox {
+	padding: 10px 20px;
+	background: darken(@backgroundColor,3%);
+	margin-bottom: 10px;
+}
+
+.placeholder {
+	height: 130px;
+}
+
+.headline {
+	margin: 16px 0; border-bottom: 1px solid #eeeeee;
+}
+
+
+.nav-trigger, label[for="nav-trigger"] {
+	display: none;
+}
+
+
+@import "shCoreDefault.less";
+
+
+// => Projectspecific Media Queries
+
+.media-mixin(@break) when (@break = @breakSmall) {
+	.sidebar {
+		width: 70%;
+		position: absolute;
+		top: 40px;
+		right: -80%;
+		z-index: 10;
+		padding: 0;
+		transition: right 0.6s ease;
+		box-shadow: 0 0 5px 0px #777777;
+		
+		.menu-list {
+			margin: 0;
+		}
+	}
+
+
+	label[for="nav-trigger"] {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 10px;
+		z-index: 10;
+		width: 40px;
+		height: 35px;
+		cursor: pointer;
+		background-color: @mainColor;
+		background-size: contain;
+		box-shadow: 0 0 3px 1px #777777;
+		
+		&:before {
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+			background-size: contain;
+			-webkit-filter: invert(100%);
+			filter: invert(100%);
+			display: block;
+			content: '';
+			height: 27px;
+			width: 32px;
+			margin-top: 4px;
+			margin-left: 4px;
+		}
+	}
+
+	.nav-trigger&:checked ~ .sidebar {
+		right: 0;
+	}
+}
+
+.media-mixin(@break) when (@break = @breakLarge) {
+
+}
+
+.media-mixin(@break) when (@break = @break2x) {
+
+}
+
+.media-mixin(@break) when (@break = @breakPrint) {
+
+}
