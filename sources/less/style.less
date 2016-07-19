@@ -7,12 +7,18 @@
 // Put all your custom CSS down here!
 // But start new LESS files for major components.
 
+.headline {
+	margin: 16px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
 .sandbox {
 	background: @backgroundColor;
 	border:1px solid lighten(@complementColor,40%);
 	margin: 30px 0 20px;
 	padding:20px;
 	position: relative;
+
 	&:before {
 		background: lighten(@complementColor,50%);
 		border-radius: 0;
@@ -29,6 +35,12 @@
 		vertical-align: top;
 		color:#fff;
 	}
+}
+
+.code {
+	padding: 10px 20px;
+	background: darken(@backgroundColor,5%);
+	margin-bottom: 10px;
 }
 
 .placeholder {
@@ -49,7 +61,7 @@
 		position: absolute;
 		top: 40px;
 		right: -80%;
-		z-index: 10;
+		z-index: 9999;
 		padding: 0;
 		transition: right 0.6s ease;
 		box-shadow: 0 0 5px 0px #777777;
@@ -65,7 +77,7 @@
 		position: absolute;
 		top: 0;
 		right: 10px;
-		z-index: 10;
+		z-index: 9999;
 		width: 40px;
 		height: 35px;
 		cursor: pointer;
@@ -74,10 +86,8 @@
 		box-shadow: 0 0 3px 1px #777777;
 		
 		&:before {
-			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect style='fill:#fff' width='30' height='6'/><rect style='fill:#fff' y='24' width='30' height='6'/><rect style='fill:#fff' y='12' width='30' height='6'/></svg>");
 			background-size: contain;
-			-webkit-filter: invert(100%);
-			filter: invert(100%);
 			display: block;
 			content: '';
 			height: 27px;

@@ -9,7 +9,11 @@ var VIUR = {
 	compressor: require('viur-ignite-compressor')
 }
 
-
+var srcpaths = {
+	html: './sources/html/**/*',
+	less: './sources/less/**/*.less',
+	js: './sources/js/**/*.js',
+};
 
 // Tasks
 
@@ -47,6 +51,12 @@ gulp.task('init', function () {
 	VIUR.css.init();
 	VIUR.js.init();
 	VIUR.icons.init();
+});
+
+gulp.task('watch', function () {
+	gulp.watch(srcpaths.less, ['css']);
+	gulp.watch(srcpaths.js, ['js']);
+	gulp.watch(srcpaths.html, ['html']);
 });
 
 // default rendering

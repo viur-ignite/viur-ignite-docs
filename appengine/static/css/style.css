@@ -815,7 +815,7 @@ ol.is-list{
   margin-left:-1px;
   float:left;
   position:relative;
-  z-index:5;
+  z-index:4;
 }
 .btnGroup .btn:not(:first-child):not(:last-child){
   border-radius:0;
@@ -837,21 +837,21 @@ ol.is-list{
 .btnGroup .btn.btn-vDanger,
 .btnGroup .btn.btn-vPrimary,
 .btnGroup .btn.btn-vEdit{
-  z-index:6;
+  z-index:5;
 }
 .btnGroup .btn:hover,
 .btnGroup .btn:active,
 .btnGroup .btn.is-selected,
 .btnGroup .btn:focus{
-  z-index:7;
+  z-index:6;
 }
 .btnGroup .btn.is-disabled,
 .btnGroup .btn.is-disabled:hover,
 .btnGroup .btn.is-disabled:focus{
-  z-index:5;
+  z-index:4;
 }
 .btnGroup .btn:focus{
-  z-index:8;
+  z-index:7;
 }
 .btn-vBlock{
   margin:0;
@@ -1219,7 +1219,7 @@ ol.is-list{
 }
 .tip{
   position:relative;
-  z-index:9;
+  z-index:8;
 }
 .tip:after{
   position:absolute;
@@ -1239,11 +1239,11 @@ ol.is-list{
   background:rgba(29, 167, 224, 0.9);
   border-radius:3px;
   -webkit-font-smoothing:subpixel-antialiased;
-  z-index:9;
+  z-index:8;
 }
 .tip:before{
   position:absolute;
-  z-index:10;
+  z-index:9;
   display:none;
   width:0;
   height:0;
@@ -1594,7 +1594,7 @@ ol.is-list{
   clear:both;
   margin-bottom:10px;
   cursor:default;
-  z-index:14;
+  z-index:13;
 }
 .alert p:last-child{
   margin-bottom:0;
@@ -1631,7 +1631,7 @@ ol.is-list{
   top:0;
   right:0;
   padding:25px;
-  z-index:13;
+  z-index:12;
 }
 .alert-vSuccess{
   color:#23511f;
@@ -1703,19 +1703,19 @@ ol.is-list{
   opacity:0;
   background:rgba(0, 0, 10, 0);
   transition:all .3s ease;
-  z-index:4;
+  z-index:3;
 }
 .popup-overlay.is-active{
   pointer-events:auto;
   opacity:.7;
   background:#00000a;
-  z-index:11;
+  z-index:10;
 }
 .popup{
   opacity:0;
   position:fixed;
   transition:all .3s ease;
-  z-index:4;
+  z-index:3;
   pointer-events:none;
   top:50px;
   left:-14%;
@@ -1724,7 +1724,7 @@ ol.is-list{
   transform:translateX(-50%);
 }
 .popup.is-active{
-  z-index:12;
+  z-index:11;
   opacity:1;
   left:50%;
   pointer-events:auto;
@@ -1924,13 +1924,13 @@ a.has-footnote:focus:after{
   position:absolute;
   background:rgba(51, 51, 51, 0.35);
   pointer-events:auto;
-  z-index:13;
+  z-index:12;
 }
 .is-busy > .spinner-overlay .spinner{
   position:absolute;
   top:50%;
   opacity:1;
-  z-index:14;
+  z-index:13;
 }
 .is-busy > .spinner-overlay .spinner .spinner-square{
   animation:spin-square-ani 1.4s infinite ease-in-out both;
@@ -2436,11 +2436,10 @@ a.menu-link .icon{
   float:left;
 }
 .breadcrumb li a{
-  color:white;
+  color:#f4f4f4;
   text-decoration:none;
   padding:10px 0 10px 55px;
-  background:brown;
-  background:#a5630d;
+  background:#d00f1c;
   position:relative;
   display:block;
   float:left;
@@ -2452,7 +2451,7 @@ a.menu-link .icon{
   height:0;
   border-top:50px solid transparent;
   border-bottom:50px solid transparent;
-  border-left:30px solid #a5630d;
+  border-left:30px solid #d00f1c;
   position:absolute;
   top:50%;
   margin-top:-50px;
@@ -2474,36 +2473,43 @@ a.menu-link .icon{
   left:100%;
   z-index:1;
 }
+.breadcrumb li a:hover,.breadcrumb li a:focus{
+  background:#f4f4f4 !important;
+  color:#d00f1c !important;
+}
+.breadcrumb li a:hover:after,.breadcrumb li a:focus:after{
+  border-left-color:#f4f4f4 !important;
+}
 .breadcrumb li:first-child a{
   padding-left:10px;
 }
 .breadcrumb li:nth-child(2) a{
-  background:#d48011;
+  background:#ef2331;
 }
 .breadcrumb li:nth-child(2) a:after{
-  border-left-color:#d48011;
+  border-left-color:#ef2331;
 }
 .breadcrumb li:nth-child(3) a{
-  background:#ee992b;
+  background:#f3525d;
 }
 .breadcrumb li:nth-child(3) a:after{
-  border-left-color:#ee992b;
+  border-left-color:#f3525d;
 }
 .breadcrumb li:nth-child(4) a{
-  background:#f2b05a;
+  background:#f6828a;
 }
 .breadcrumb li:nth-child(4) a:after{
-  border-left-color:#f2b05a;
+  border-left-color:#f6828a;
 }
 .breadcrumb li:nth-child(5) a{
-  background:#f5c689;
+  background:#f9b2b6;
 }
 .breadcrumb li:nth-child(5) a:after{
-  border-left-color:#f5c689;
+  border-left-color:#f9b2b6;
 }
 .breadcrumb li:last-child a{
   background:#fff;
-  color:black;
+  color:#222;
   pointer-events:none;
   cursor:default;
 }
@@ -2512,12 +2518,6 @@ a.menu-link .icon{
 }
 .breadcrumb li:last-child a:after{
   border:0;
-}
-.breadcrumb li:last-child a:hover,.breadcrumb li:last-child a:focus{
-  background:#76470a;
-}
-.breadcrumb li:last-child a:hover:after,.breadcrumb li:last-child a:focus:after{
-  border-left-color:#76470a !important;
 }
 .image{
   background-image:url('../static/images/placeholder.svg');
@@ -2879,7 +2879,7 @@ a.menu-link .icon{
   background-image:url('../icons/pen.svg');
 }
 .zDev{
-  z-index:15;
+  z-index:14;
 }
 .syntaxhighlighter a,
 .syntaxhighlighter div,
@@ -3046,6 +3046,10 @@ a.menu-link .icon{
   margin:0;
   display:none;
 }
+.headline{
+  margin:16px 0;
+  border-bottom:1px solid #eeeeee;
+}
 .sandbox{
   background:#fafafa;
   border:1px solid #999999;
@@ -3068,6 +3072,11 @@ a.menu-link .icon{
   text-transform:uppercase;
   vertical-align:top;
   color:#fff;
+}
+.code{
+  padding:10px 20px;
+  background:#ededed;
+  margin-bottom:10px;
 }
 .placeholder{
   height:130px;
@@ -3174,7 +3183,7 @@ label[for="nav-trigger"]{
     position:absolute;
     top:40px;
     right:-80%;
-    z-index:3;
+    z-index:15;
     padding:0;
     transition:right 0.6s ease;
     box-shadow:0 0 5px 0px #777777;
@@ -3187,7 +3196,7 @@ label[for="nav-trigger"]{
     position:absolute;
     top:0;
     right:10px;
-    z-index:3;
+    z-index:15;
     width:40px;
     height:35px;
     cursor:pointer;
@@ -3196,10 +3205,8 @@ label[for="nav-trigger"]{
     box-shadow:0 0 3px 1px #777777;
   }
   label[for="nav-trigger"]:before{
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect style='fill:#fff' width='30' height='6'/><rect style='fill:#fff' y='24' width='30' height='6'/><rect style='fill:#fff' y='12' width='30' height='6'/></svg>");
     background-size:contain;
-    -webkit-filter:invert(100%);
-    filter:invert(100%);
     display:block;
     content:'';
     height:27px;
