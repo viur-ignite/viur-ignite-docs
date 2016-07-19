@@ -2438,8 +2438,8 @@ a.menu-link .icon{
 .breadcrumb li a{
   color:#f4f4f4;
   text-decoration:none;
-  padding:10px 0 10px 55px;
-  background:#d00f1c;
+  padding:5px 0 5px 55px;
+  background:#333;
   position:relative;
   display:block;
   float:left;
@@ -2451,7 +2451,7 @@ a.menu-link .icon{
   height:0;
   border-top:50px solid transparent;
   border-bottom:50px solid transparent;
-  border-left:30px solid #d00f1c;
+  border-left:30px solid #333;
   position:absolute;
   top:50%;
   margin-top:-50px;
@@ -2475,7 +2475,7 @@ a.menu-link .icon{
 }
 .breadcrumb li a:hover,.breadcrumb li a:focus{
   background:#f4f4f4 !important;
-  color:#d00f1c !important;
+  color:#333 !important;
 }
 .breadcrumb li a:hover:after,.breadcrumb li a:focus:after{
   border-left-color:#f4f4f4 !important;
@@ -2484,28 +2484,28 @@ a.menu-link .icon{
   padding-left:10px;
 }
 .breadcrumb li:nth-child(2) a{
-  background:#ef2331;
+  background:#4d4d4d;
 }
 .breadcrumb li:nth-child(2) a:after{
-  border-left-color:#ef2331;
+  border-left-color:#4d4d4d;
 }
 .breadcrumb li:nth-child(3) a{
-  background:#f3525d;
+  background:#666666;
 }
 .breadcrumb li:nth-child(3) a:after{
-  border-left-color:#f3525d;
+  border-left-color:#666666;
 }
 .breadcrumb li:nth-child(4) a{
-  background:#f6828a;
+  background:#808080;
 }
 .breadcrumb li:nth-child(4) a:after{
-  border-left-color:#f6828a;
+  border-left-color:#808080;
 }
 .breadcrumb li:nth-child(5) a{
-  background:#f9b2b6;
+  background:#999999;
 }
 .breadcrumb li:nth-child(5) a:after{
-  border-left-color:#f9b2b6;
+  border-left-color:#999999;
 }
 .breadcrumb li:last-child a{
   background:#fff;
