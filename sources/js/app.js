@@ -1,5 +1,3 @@
-// Put here your own javascript code
-
 (function($) {
 	$.fn.outerHTML = function(s) {
 		return (s) 
@@ -8,10 +6,11 @@
 	}
 })(jQuery);
 
+
 SyntaxHighlighter.defaults['gutter'] = false;
 $(function() {
 	$('.js-codeMe').each(function() {
-		var html = $(this).outerHTML().replace(' js-codeMe', '').replace('js-codeMe', '').replace(' class=""', '').replace('class=""', '')
+		var html = $(this).outerHTML().replace(' js-codeMe', '').replace('js-codeMe', '').replace(' class=""', '').replace('class=""', '');
 		var escaped = $("<div>").text(html).html();
 
 		if($(this).parent().hasClass('sandbox') === true) {
@@ -26,7 +25,7 @@ $(function() {
 	})
 
 	$('.js-codeChild').each(function() {
-		var html = $(this).html().replace(' js-codeChild', '').replace('js-codeChild', '').replace(' class=""', '').replace('class=""', '')
+		var html = $(this).html();
 		var escaped = $("<div>").text(html).html();
 
 		if($(this).parent().hasClass('sandbox') === true) {
