@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "name": "My App",
-  "description": "Description of My App",
+  "name": "VIUR Ignite Docs",
+  "description": "Documentation of VIUR Ignite",
   "icons": {
     "60": "../static/meta/firefox_app_60x60.png",
     "128": "../static/meta/firefox_app_128x128.png",
     "512": "../static/meta/firefox_app_512x512.png"
   },
   "developer": {
-    "name": "Developer of My App",
-    "url": "URL of Developer"
+    "name": "Mausbrand",
+    "url": "www.mausbrand.de"
   }
 }

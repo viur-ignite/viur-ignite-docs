@@ -2677,17 +2677,17 @@ a.menu-link .icon{
 .i-scissors:before{
   background-image:url('../icons/actions/scissors.svg');
 }
+.i-screen:before{
+  background-image:url('../icons/actions/screen.svg');
+}
+.i-spyglass:before{
+  background-image:url('../icons/actions/spyglass.svg');
+}
 .i-square-select-all:before{
   background-image:url('../icons/actions/square-select-all.svg');
 }
 .i-square-selected:before{
   background-image:url('../icons/actions/square-selected.svg');
-}
-.i-spyglass:before{
-  background-image:url('../icons/actions/spyglass.svg');
-}
-.i-screen:before{
-  background-image:url('../icons/actions/screen.svg');
 }
 .i-square-unselect-all:before{
   background-image:url('../icons/actions/square-unselect-all.svg');
@@ -2836,8 +2836,14 @@ a.menu-link .icon{
 .i-order-shipped:before{
   background-image:url('../icons/modules/order-shipped.svg');
 }
+.i-pages:before{
+  background-image:url('../icons/modules/pages.svg');
+}
 .i-photo:before{
   background-image:url('../icons/modules/photo.svg');
+}
+.i-press:before{
+  background-image:url('../icons/modules/press.svg');
 }
 .i-qr-code:before{
   background-image:url('../icons/modules/qr-code.svg');
@@ -2845,32 +2851,26 @@ a.menu-link .icon{
 .i-recently-added:before{
   background-image:url('../icons/modules/recently-added.svg');
 }
-.i-press:before{
-  background-image:url('../icons/modules/press.svg');
-}
 .i-recently-edited:before{
   background-image:url('../icons/modules/recently-edited.svg');
-}
-.i-shoutbox:before{
-  background-image:url('../icons/modules/shoutbox.svg');
 }
 .i-settings:before{
   background-image:url('../icons/modules/settings.svg');
 }
+.i-shoutbox:before{
+  background-image:url('../icons/modules/shoutbox.svg');
+}
 .i-statistics:before{
   background-image:url('../icons/modules/statistics.svg');
 }
-.i-pages:before{
-  background-image:url('../icons/modules/pages.svg');
-}
-.i-video:before{
-  background-image:url('../icons/modules/video.svg');
+.i-tree:before{
+  background-image:url('../icons/modules/tree.svg');
 }
 .i-users:before{
   background-image:url('../icons/modules/users.svg');
 }
-.i-tree:before{
-  background-image:url('../icons/modules/tree.svg');
+.i-video:before{
+  background-image:url('../icons/modules/video.svg');
 }
 .i-not-allowed:before{
   background-image:url('../icons/not-allowed.svg');

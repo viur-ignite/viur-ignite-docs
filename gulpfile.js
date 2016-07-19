@@ -35,7 +35,13 @@ gulp.task('icons', function () {
 // çompression
 gulp.task('comp', function () {
 	return VIUR.compressor.build({
-		index: "./sources/html/_layout.html"
+		index: "./sources/html/_layout.html",
+		appName: 'VIUR Ignite Docs',
+		appURL: 'www.viur.is',
+		appDescription: 'Documentation of VIUR Ignite',
+		developerName: 'Mausbrand',
+		developerURL: 'www.mausbrand.de',
+		background: '#d00f1c'
 	})
 });
 
