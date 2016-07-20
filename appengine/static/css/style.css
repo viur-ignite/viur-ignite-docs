@@ -351,6 +351,10 @@ table{
 *{
   box-sizing:border-box;
 }
+html{
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
 body{
   margin:0;
   background:#fafafa;
@@ -2160,6 +2164,7 @@ a.menu-link .icon{
   border-radius:3px;
   padding:10px;
   margin:0;
+  height:100%;
 }
 .grid-col-1{
   width:8.33333333%;

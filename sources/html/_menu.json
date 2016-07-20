@@ -1,0 +1,24 @@
+{
+	"menu1_Static": {
+		"index.html_Primary" : "Start",
+		"gettingStarted.html" : "Getting Started",
+		"states.html" : "States"
+	},
+	"menu2_Sort": {
+		"boxes.html" : "Media Boxes",
+		"menus.html" : "Menu",
+		"messages.html" : "Alerts and Messages",
+		"forms.html" : "Forms",
+		"grid.html" : "Grid",
+		"buttons.html" : "Buttons",
+		"parallax.html" : "Parallax",
+		"popup.html" : "Popups",
+		"spinner.html" : "Spinner",
+		"progress.html" : "Progressbar",
+		"tables.html" : "Table",
+		"types.html" : "Typography",
+		"badges.html" : "Tooltips and Badges",
+		"tabs.html" : "Tabs",
+		"breadcrumb.html" : "Breadcrumbs"
+	}
+}
