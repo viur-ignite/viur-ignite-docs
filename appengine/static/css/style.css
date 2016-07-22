@@ -350,6 +350,7 @@ table{
 }
 *{
   box-sizing:border-box;
+  position:relative;
 }
 html{
   overflow-y:scroll;
@@ -366,6 +367,7 @@ body{
   font-family:'Source Sans Pro', 'Open Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   -webkit-font-smoothing:antialiased;
   -webkit-text-size-adjust:100%;
+  min-height:100vh;
 }
 a{
   color:#d00f1c;
@@ -2099,6 +2101,10 @@ a.menu-link .icon{
   width:25%;
   max-width:250px;
 }
+.nav-trigger,
+label[for="nav-trigger"]{
+  display:none;
+}
 .parallax{
   max-height:400px;
   width:100%;
@@ -3086,10 +3092,6 @@ a.menu-link .icon{
 .placeholder{
   height:130px;
 }
-.nav-trigger,
-label[for="nav-trigger"]{
-  display:none;
-}
 @media only screen and (max-width: 1100px){
   .popup{
     width:90%;
@@ -3158,31 +3160,6 @@ label[for="nav-trigger"]{
   .no-mobile{
     display:none;
   }
-  .parallax{
-    background-attachment:scroll!important;
-    background-size:cover;
-    max-height:300px;
-  }
-  .grid-row{
-    display:block;
-    margin:0;
-    margin-bottom:10px;
-  }
-  .grid-col{
-    display:block;
-    -ms-flex:1 1 auto;
-    flex:1 1 auto;
-    width:100%;
-    padding:0;
-    margin:0;
-  }
-  .grid-col:not(:last-child){
-    margin-bottom:10px;
-  }
-  .image-vParallax{
-    background-attachment:scroll!important;
-    background-size:cover;
-  }
   .sidebar{
     width:70%;
     position:absolute;
@@ -3208,6 +3185,7 @@ label[for="nav-trigger"]{
     background-color:#d00f1c;
     background-size:contain;
     box-shadow:0 0 3px 1px #777777;
+    border-radius:0 0 3px 3px;
   }
   label[for="nav-trigger"]:before{
     background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect style='fill:#fff' width='30' height='6'/><rect style='fill:#fff' y='24' width='30' height='6'/><rect style='fill:#fff' y='12' width='30' height='6'/></svg>");
@@ -3221,6 +3199,31 @@ label[for="nav-trigger"]{
   }
   .nav-trigger:checked ~ .sidebar{
     right:0;
+  }
+  .parallax{
+    background-attachment:scroll!important;
+    background-size:cover;
+    max-height:300px;
+  }
+  .grid-row{
+    display:block;
+    margin:0;
+    margin-bottom:10px;
+  }
+  .grid-col{
+    display:block;
+    -ms-flex:1 1 auto;
+    flex:1 1 auto;
+    width:100%;
+    padding:0;
+    margin:0;
+  }
+  .grid-col:not(:last-child){
+    margin-bottom:10px;
+  }
+  .image-vParallax{
+    background-attachment:scroll!important;
+    background-size:cover;
   }
 }
 @media only screen and (min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 2.375), only screen and (min-resolution: 228dpi){
