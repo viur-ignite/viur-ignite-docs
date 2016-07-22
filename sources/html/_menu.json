@@ -1,8 +1,9 @@
 {
-	"menu1_static": {
+	"menu1_Static": {
 		"index.html_Primary" : "Start",
 		"gettingStarted.html" : "Getting Started",
-		"states.html" : "States"
+		"states.html" : "States",
+		"variables.html" : "Variables/Settings"
 	},
 	"menu2_Sort": {
 		"boxes.html" : "Media Boxes",

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 	
-	<title>VIUR CSS - Grid</title>
+	<title>VIUR Ignite CSS - Grid</title>
 	
 	<meta name="description" content="This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.">
 	<meta name="keywords" content="VIUR, CSS, framework, vicss">
@@ -61,6 +61,7 @@
 					<li class="menu-item menu1-item"><a class="menu-link is-primary" href="index.html">Start</a></li>
 <li class="menu-item menu1-item"><a class="menu-link" href="gettingStarted.html">Getting Started</a></li>
 <li class="menu-item menu1-item"><a class="menu-link" href="states.html">States</a></li>
+<li class="menu-item menu1-item"><a class="menu-link" href="variables.html">Variables/Settings</a></li>
 
 				</ul>
 				<ul class="menu-list">
@@ -85,24 +86,33 @@
 			<div class="content">
 	<section class="section">
 		<h1 class="headline">Grid</h1>
+		<p>Use a grid System to build repsosive Colums.</p> 
+	</section>
+
+	<section class="section">
+		<h2 class="subline">Customize your Grid System</h2>
+		<p>Use these variables in your style.less to adjust your grid system.</p>
+		<pre class="code">@gridSpace: 10px;
+@gridColumns: 12;</pre>
 	</section>
 	
 	 
 	<section class="section">
 		<h2 class="subline">Four equal columns</h2>
+		<p>Create a <mark>grid-row</mark> div and add multiple <mark>grid-col</mark>. All Columns will have the same width.</p>
 		<div class="sandbox js-codeChild">
 			<div class="grid-row">
 				<div class="grid-col" style="text-align: center;">
-					<p>.grid-col</p>
+					<p>Column 1</p>
 				</div>
 				<div class="grid-col" style="text-align: center;">
-					<p>.grid-col</p>
+					<p>Column 2</p>
 				</div>
 				<div class="grid-col" style="text-align: center;">
-					<p>.grid-col</p>
+					<p>Column 3</p>
 				</div>
 				<div class="grid-col" style="text-align: center;">
-					<p>.grid-col</p>
+					<p>Column 4</p>
 				</div>
 			</div>
 		</div>
@@ -111,19 +121,20 @@
 
 	<section class="section">
 		<h2 class="subline">Four unequal columns</h2>
+		<p>To change the size of a column append the class <mark>grid-col-<i>[size]</i></mark></p>
 		<div class="sandbox js-codeChild">
 			<div class="grid-row">
 				<div class="grid-col grid-col-2" style="text-align: center;">
-					<p>.grid-col.grid-col-2</p>
+					<p>grid-col-2</p>
 				</div>
 				<div class="grid-col grid-col-4" style="text-align: center;">
-					<p>.grid-col.grid-col-4</p>
+					<p>rid-col-4</p>
 				</div>
-				<div class="grid-col grid-col-2" style="text-align: center;">
-					<p>.grid-col.grid-col-2</p>
+				<div class="grid-col" style="text-align: center;">
+					<p>Auto</p>
 				</div>
 				<div class="grid-col grid-col-4" style="text-align: center;">
-					<p>.grid-col.grid-col-4</p>
+					<p>grid-col-4</p>
 				</div>
 			</div>
 		</div>
@@ -132,13 +143,14 @@
 	
 	<section class="section">
 		<h2 class="subline">Two columns</h2>
+		<p>Only the first column has a width. The second is auto.</p>
 		<div class="sandbox js-codeChild">
 			<div class="grid-row flex-around">
 				<div class="grid-col grid-col-5" style="text-align: center;">
-					<p>.grid-col.grid-col-5</p>
+					<p>grid-col-5</p>
 				</div>
 				<div class="grid-col" style="text-align: center;">
-					<p>.grid-col</p>
+					<p>Auto</p>
 				</div>
 			</div>
 		</div>
@@ -147,36 +159,30 @@
 
 	<section class="section">
 		<h2 class="subline">Two columns with offset</h2>
+		<p>Add the class <mark>offset-is-<i>[size]</i></mark> to get space between the columns</p>
 		<div class="sandbox js-codeChild">
 			<div class="grid-row flex-around">
 				<div class="grid-col grid-col-3" style="text-align: center;">
-					<p>.grid-col.grid-col-3</p>
+					<p>No offset</p>
 				</div>
 				<div class="grid-col grid-col-auto offset-is-half" style="text-align: center;">
-					<p>.grid-col.offset-is-half</p>
+					<p>offset-is-half</p>
 				</div>
 			</div>
-		</div>
-	</section>
-
-	
-	<section class="section">
-		<h2 class="subline">Two columns with offset</h2>
-		<div class="sandbox js-codeChild">
 			<div class="grid-row flex-around">
 				<div class="grid-col grid-col-3" style="text-align: center;">
-					<p>.grid-col.grid-col-3</p>
+					<p>No offset</p>
 				</div>
-				<div class="grid-col grid-col-auto offset-is-2" style="text-align: center;">
-					<p>.grid-col.offset-is-2</p>
+				<div class="grid-col offset-is-2" style="text-align: center;">
+					<p>offset-is-2</p>
 				</div>
 			</div>
 		</div>
 	</section>
-
 </div>
 		</div>
 	</article>
+	
 	<script src="../static/js/jquery-3.1.0.min.js"></script>
 	<script src="../static/js/shCore.js"></script>
 	<script src="../static/js/shBrushXml.js"></script>

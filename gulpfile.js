@@ -33,7 +33,7 @@ gulp.task('icons', function () {
 });
 
 // çompression
-gulp.task('comp', function () {
+gulp.task('compress', function () {
 	return VIUR.compressor.build({
 		index: "./sources/html/_layout.html",
 		appName: 'VIUR Ignite Docs',
