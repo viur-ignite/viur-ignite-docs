@@ -2688,17 +2688,17 @@ label[for="nav-trigger"]{
 .i-scissors:before{
   background-image:url('../icons/actions/scissors.svg');
 }
-.i-screen:before{
-  background-image:url('../icons/actions/screen.svg');
-}
-.i-spyglass:before{
-  background-image:url('../icons/actions/spyglass.svg');
-}
 .i-square-select-all:before{
   background-image:url('../icons/actions/square-select-all.svg');
 }
 .i-square-selected:before{
   background-image:url('../icons/actions/square-selected.svg');
+}
+.i-screen:before{
+  background-image:url('../icons/actions/screen.svg');
+}
+.i-spyglass:before{
+  background-image:url('../icons/actions/spyglass.svg');
 }
 .i-square-unselect-all:before{
   background-image:url('../icons/actions/square-unselect-all.svg');
