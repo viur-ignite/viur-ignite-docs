@@ -20,6 +20,7 @@
 		"types.html" : "Typography",
 		"badges.html" : "Tooltips and Badges",
 		"tabs.html" : "Tabs",
-		"breadcrumb.html" : "Breadcrumbs"
+		"breadcrumb.html" : "Breadcrumbs",
+		"slider.html" : "Slider"
 	}
 }
