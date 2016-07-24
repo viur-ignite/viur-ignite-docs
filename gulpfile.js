@@ -32,7 +32,7 @@ gulp.task('icons', function () {
 	return VIUR.icons.build()
 });
 
-// çompression
+// compression
 gulp.task('compress', function () {
 	return VIUR.compressor.build({
 		index: "./sources/html/_layout.html",
