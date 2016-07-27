@@ -2158,10 +2158,6 @@ label[for="nav-trigger"]{
 .grid-row:last-child{
   margin-bottom:-10px;
 }
-.grid-row.flex-around{
-  -ms-flex-pack:distribute;
-  justify-content:space-around;
-}
 .grid-row:after{
   clear:both;
 }
@@ -2170,14 +2166,6 @@ label[for="nav-trigger"]{
   -ms-flex:1 1 auto;
   flex:1 1 auto;
   padding:10px;
-}
-.grid-col p{
-  border:1px solid #cecece;
-  background:#f4f4f4;
-  border-radius:3px;
-  padding:10px;
-  margin:0;
-  height:100%;
 }
 .grid-col-1{
   width:8.33333333%;
@@ -2274,6 +2262,15 @@ label[for="nav-trigger"]{
 }
 .offset-is-12{
   margin-left:100%;
+}
+.grid-col-half{
+  with:50%;
+}
+.grid-col-third{
+  with:33.33333333%;
+}
+.grid-col-quarter{
+  with:25%;
 }
 .offset-is-half{
   margin-left:50%;
