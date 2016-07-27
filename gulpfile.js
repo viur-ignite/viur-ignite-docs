@@ -2,8 +2,8 @@
 
 var gulp = require('gulp');
 var VIUR = {
-	css: require('viur-ignite-css'),
-	js: require('viur-ignite-js'),
+	css: require('../viur-ignite-css'),
+	js: require('../viur-ignite-js'),
 	icons: require('viur-ignite-icons'),
 	html: require('viur-ignite-html'),
 	compressor: require('viur-ignite-compressor')
@@ -63,6 +63,7 @@ gulp.task('watch', function () {
 	gulp.watch(srcpaths.less, ['css']);
 	gulp.watch(srcpaths.js, ['js']);
 	gulp.watch(srcpaths.html, ['html']);
+	gulp.watch('../viur-ignite-js/js/**/*.js', ['js']);
 });
 
 // default rendering

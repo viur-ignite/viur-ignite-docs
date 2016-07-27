@@ -22,5 +22,8 @@
 		"tabs.html" : "Tabs",
 		"breadcrumb.html" : "Breadcrumbs",
 		"slider.html" : "Slider"
+	},
+	"menu3": {
+		"js.html" : "JS"
 	}
 }

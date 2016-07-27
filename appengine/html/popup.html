@@ -87,12 +87,16 @@
 <li class="menu-item menu2-item"><a class="menu-link" href="types.html">Typography</a></li>
 
 				</ul>
+				<ul class="menu-list">
+					<li class="menu-item menu3-item"><a class="menu-link" href="js.html">JS</a></li>
+
+				</ul>
 			</div>
 			<div class="content section">
 	<h1 class="headline">Popups</h1>
 	<p></p>
 
-	<div class="popup is-active">
+	<div class="popup">
 		<div class="popup-box">
 			<header class="popup-header">Popup Header </header>
 			<div class="popup-content">
@@ -101,23 +105,25 @@
 					<h3 class="msg-headline">Achtung!</h3>
 					<p>This is a warning.</p>
 				</div>
-				<div class="inputGroup inputGroup-vPopup">
-					<label class="label is-recommended">Label</label>
-					<input class="input is-recommended" type="text" placeholder="Input">
-				</div>
-				<div class="formActions">
-					<a type="submit" class="btn btn-vPrimary" href="index.html">Submit</a>
-					<a type="reset" class="btn btn-vDanger" href="index.html">Reset</a>
-				</div>
+				<form>
+					<div class="inputGroup inputGroup-vPopup">
+						<label class="label is-recommended">Label</label>
+						<input class="input is-recommended" type="text" placeholder="Input">
+					</div>
+					<div class="formActions">
+						<input type="submit" class="btn btn-vPrimary"  value="Submit" />
+						<input type="reset" class="btn btn-vDanger" value="Reset" />
+					</div>
+				</form>
 			</div>
 			<footer class="popup-footer"></footer>
-			<a class="popup-close has-icon i-cross" href="index.html"></a>
+			<button class="popup-close has-icon i-cross d"></button>
 		</div>
 	</div>
 
 </div>
 
-<div class="popup-overlay is-active"></div>
+<div class="popup-overlay"></div>
 		</div>
 	</article>
 	
