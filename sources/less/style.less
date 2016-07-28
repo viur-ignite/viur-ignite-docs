@@ -1,59 +1,59 @@
 @charset "UTF-8";
 @import "shCoreDefault.less";
 /* ---------------------------------------------------------------------------------------
-	#PROJECTSPECIFIC ELEMENTS
-	--------------------------------------------------------------------------------------- */
+#PROJECTSPECIFIC ELEMENTS
+--------------------------------------------------------------------------------------- */
 
 // Put all your custom CSS down here!
 // But start new LESS files for major components.
 
 .headline {
-	margin: 16px 0;
-    border-bottom: 1px solid #eeeeee;
+  margin: 16px 0;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .sandbox {
-	background: @backgroundColor;
-	border:1px solid lighten(@complementColor,40%);
-	margin: 30px 0 20px;
-	padding:20px;
-	position: relative;
+  background: @backgroundColor;
+  border:1px solid lighten(@complementColor,40%);
+  margin: 30px 0 20px;
+  padding:20px;
+  position: relative;
 
-	&:before {
-		background: lighten(@complementColor,50%);
-		border-radius: 0;
-		bottom: 100%;
-		content: "Sandbox";
-		display: inline-block;
-		font-size: .6em;
-		font-weight: bold;
-		left: -1px;
-		letter-spacing: 1px;
-		padding: 2px 4px;
-		position: absolute;
-		text-transform: uppercase;
-		vertical-align: top;
-		color:#fff;
-	}
+  &:before {
+    background: lighten(@complementColor,50%);
+    border-radius: 0;
+    bottom: 100%;
+    content: "Sandbox";
+    display: inline-block;
+    font-size: .6em;
+    font-weight: bold;
+    left: -1px;
+    letter-spacing: 1px;
+    padding: 2px 4px;
+    position: absolute;
+    text-transform: uppercase;
+    vertical-align: top;
+    color:#fff;
+  }
 }
 
 .code {
-	padding: 10px 20px;
-	background: darken(@backgroundColor,5%);
-	margin-bottom: 10px;
+  padding: 10px 20px;
+  background: darken(@backgroundColor,5%);
+  margin-bottom: 10px;
 }
 
 .placeholder {
-	height: 130px;
+  height: 130px;
 }
 
 .grid-demo .grid-col p {
-	border: 1px solid darken(@menuBackgroundColor,15%);
-	background: @menuBackgroundColor;
-	border-radius: 3px;
-	padding: 10px;
-	margin: 0;
-	height: 100%;
+  border: 1px solid darken(@menuBackgroundColor,15%);
+  background: @menuBackgroundColor;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0;
+  height: 100%;
 }
 
 
