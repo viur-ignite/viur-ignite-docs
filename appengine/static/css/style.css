@@ -5,6 +5,48 @@
   src:local("Varela Round"),local(VarelaRound-Regular),url(//fonts.gstatic.com/s/varelaround/v6/APH4jr0uSos5wiut5cpjrnZ2MAKAc2x4R1uOSeegc5U.eot?#) format("eot"),url(//fonts.gstatic.com/s/varelaround/v6/APH4jr0uSos5wiut5cpjrugdm0LZdjqr5-oayXSOefg.woff2) format("woff2");
 }
 @font-face{
+  font-family:"Source Code Pro";
+  font-style:normal;
+  font-weight:200;
+  src:local("Source Code Pro ExtraLight"),local(SourceCodePro-ExtraLight),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqVl_EbE5kujbLzdX6sKqH6g.eot?#) format("eot"),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqSVh0V6fR69OLaFLklYbiSk.woff2) format("woff2");
+}
+@font-face{
+  font-family:"Source Code Pro";
+  font-style:normal;
+  font-weight:300;
+  src:local("Source Code Pro Light"),local(SourceCodePro-Light),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqRlTL9oEQvYTI0YAW1-Ysv0.eot?#) format("eot"),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqeode0-EuMkY--TSyExeINg.woff2) format("woff2");
+}
+@font-face{
+  font-family:"Source Code Pro";
+  font-style:normal;
+  font-weight:400;
+  src:local("Source Code Pro"),local(SourceCodePro-Regular),url(//fonts.gstatic.com/s/sourcecodepro/v6/mrl8jkM18OlOQN8JLgasD90tugusXa58UbOrParLRF0.eot?#) format("eot"),url(//fonts.gstatic.com/s/sourcecodepro/v6/mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2) format("woff2");
+}
+@font-face{
+  font-family:"Source Code Pro";
+  font-style:normal;
+  font-weight:500;
+  src:local("Source Code Pro Medium"),local(SourceCodePro-Medium),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqW98Vd-2iqmUspkFPu1BpxQ.eot?#) format("eot"),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqUHj7CJK1I4bLnYZkMY-kd4.woff2) format("woff2");
+}
+@font-face{
+  font-family:"Source Code Pro";
+  font-style:normal;
+  font-weight:600;
+  src:local("Source Code Pro Semibold"),local(SourceCodePro-Semibold),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqdanmHNzStikJN_FjplbBik.eot?#) format("eot"),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqSOFnW3Jk0f09zW_Yln67Ac.woff2) format("woff2");
+}
+@font-face{
+  font-family:"Source Code Pro";
+  font-style:normal;
+  font-weight:700;
+  src:local("Source Code Pro Bold"),local(SourceCodePro-Bold),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqVV89XnfCtb1fhQGOlhyqi8.eot?#) format("eot"),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqUo0As1BFRXtCDhS66znb_k.woff2) format("woff2");
+}
+@font-face{
+  font-family:"Source Code Pro";
+  font-style:normal;
+  font-weight:900;
+  src:local("Source Code Pro Black"),local(SourceCodePro-Black),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqSDZg7i-e40o9FYYiSpZxAc.eot?#) format("eot"),url(//fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqXZhYM0_6AejPZE-OqA592o.woff2) format("woff2");
+}
+@font-face{
   font-family:"Source Sans Pro";
   font-style:italic;
   font-weight:200;
@@ -77,7 +119,6 @@
   src:local("Source Sans Pro Black"),local(SourceSansPro-Black),url(//fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGCDZg7i-e40o9FYYiSpZxAc.eot?#) format("eot"),url(//fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGHZhYM0_6AejPZE-OqA592o.woff2) format("woff2");
 }
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Varela+Round);
 html,
 body,
 div,
@@ -227,8 +268,8 @@ pre,
 code,
 kbd,
 samp{
-  font-family:Courier, monospace;
-  _font-family:Courier, monospace;
+  font-family:'Source Code Pro', Courier, monospace;
+  _font-family:'Source Code Pro', Courier, monospace;
   font-size:1em;
 }
 pre{
@@ -471,7 +512,7 @@ blockquote{
 }
 code,
 pre{
-  font-family:Courier, monospace;
+  font-family:'Source Code Pro', Courier, monospace;
 }
 code{
   color:#000000;
@@ -3127,7 +3168,7 @@ label[for="nav-trigger"]{
   vertical-align:baseline !important;
   width:auto !important;
   box-sizing:content-box !important;
-  font-family:Courier, monospace !important;
+  font-family:'Source Code Pro', Courier, monospace !important;
   font-weight:normal !important;
   font-style:normal !important;
   font-size:1em !important;
