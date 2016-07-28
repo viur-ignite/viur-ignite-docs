@@ -1,0 +1,23 @@
+{
+  "name": "viur-ignite-docs",
+  "version": "1.0.0",
+  "description": "DOCS for VIUR Ignite",
+  "main": "",
+  "scripts": {
+    "test": "\"echo Hello world\""
+  },
+  "repository": {},
+  "keywords": [],
+  "author": "VIUR",
+  "license": "GPL-3.0",
+  "bugs": {},
+  "homepage": "",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "viur-ignite-compressor": "^1.0.4",
+    "viur-ignite-css": "^1.0.22",
+    "viur-ignite-html": "^1.0.7",
+    "viur-ignite-icons": "^1.0.16",
+    "viur-ignite-js": "^1.0.3"
+  }
+}
