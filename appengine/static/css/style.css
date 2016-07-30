@@ -2888,6 +2888,41 @@ label[for="nav-trigger"]{
   display:-ms-flexbox;
   display:flex;
 }
+.pagination{
+  -ms-flex-align:center;
+  align-items:center;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-pack:center;
+  justify-content:center;
+  text-align:center;
+}
+.pagination span{
+  display:block;
+  margin:0 4px;
+}
+.pagination li:not(:last-child){
+  margin-right:4px;
+}
+.pagination ul{
+  -ms-flex-align:center;
+  align-items:center;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex:1;
+  flex:1;
+  -ms-flex-pack:center;
+  justify-content:center;
+}
+.pagination > .pagination-btn:not(:first-child){
+  -ms-flex-order:1;
+  order:1;
+}
+.pagination-btn{
+  display:block;
+  min-width:32px;
+  padding:3px 8px;
+}
 .image{
   background-image:url('../images/placeholder.svg');
   background-size:cover;
@@ -3613,6 +3648,25 @@ label[for="nav-trigger"]{
   }
   .grid-col:not(:last-child){
     margin-bottom:10px;
+  }
+  .pagination{
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+  }
+  .pagination li{
+    -ms-flex:1;
+    flex:1;
+  }
+  .pagination ul{
+    margin-top:10px;
+  }
+  .pagination > .pagination-btn{
+    width:calc(50% - 5px);
+  }
+  .pagination > .pagination-btn:not(:first-child){
+    margin-left:10px;
+    -ms-flex-order:0;
+    order:0;
   }
   .image-vParallax{
     background-attachment:scroll !important;
