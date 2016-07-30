@@ -92,23 +92,26 @@
 			<div class="content">
 	<section class="section">
 		<h1 class="headline">Tabs</h1>
+		<p>Write the class <code>.tab-vFullscreen</code> to a <code>.tab</code>-item or the whole
+		<code>.tabs</code>-element to show the content area in fullscreen (height:100%)<br>
+		See Tab Two as example for this variation</p>
 	</section>
-	
+
 	<section class="section">
 		<div class="sandbox js-codeChild">
 			<div class="tabs">
 				<div class="tab">
-					<input type="radio" id="tab-3" name="tab-group-2" checked>
-					<label for="tab-3">Tab One</label>
+					<input type="radio" id="tab-1" name="tab-group">
+					<label class="tab-label" for="tab-1">Tab One</label>
 
 					<div class="tab-content">
 						<p>Stuff for Tab One</p>
 					</div>
 				</div>
 
-				<div class="tab">
-					<input type="radio" id="tab-4" name="tab-group-2" checked>
-					<label for="tab-4">Tab Two</label>
+				<div class="tab tab-vFullscreen">
+					<input type="radio" id="tab-2" name="tab-group" checked>
+					<label class="tab-label" for="tab-2">Tab Two</label>
 
 					<div class="tab-content">
 						<p>Stuff for Tab Two</p>
@@ -116,19 +119,18 @@
 				</div>
 
 				<div class="tab">
-					<input type="radio" id="tab-5" name="tab-group-2">
-					<label for="tab-5">Tab Three</label>
+					<input type="radio" id="tab-3" name="tab-group">
+					<label class="tab-label" for="tab-3">Tab Three</label>
 
 					<div class="tab-content">
 						<p>Stuff for Tab Three</p>
-
 						<img src="http://placekitten.com/200/100">
 					</div>
 				</div>
 
 				<div class="tab">
-					<input type="radio" id="tab-6" name="tab-group-2">
-					<label for="tab-6">Tab Four</label>
+					<input type="radio" id="tab-4" name="tab-group">
+					<label class="tab-label" for="tab-4">Tab Four</label>
 
 					<div class="tab-content">
 						<p>Stuff for Tab Four</p>
@@ -138,6 +140,7 @@
 		</div>
 	</section>
 </div>
+
 		</div>
 	</article>
 
