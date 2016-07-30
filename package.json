@@ -12,7 +12,7 @@
   "license": "GPL-3.0",
   "bugs": {},
   "homepage": "",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "^3.9.1",
     "viur-ignite-compressor": "^1.0.4",
     "viur-ignite-css": "^1.0.22",
