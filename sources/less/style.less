@@ -1,15 +1,16 @@
 @charset "UTF-8";
 @import "shCoreDefault.less";
-/* ---------------------------------------------------------------------------------------
-	#PROJECTSPECIFIC ELEMENTS
-	--------------------------------------------------------------------------------------- */
+/**
+ * PROJECTSPECIFIC ELEMENTS
+ */
+
 
 // Put all your custom CSS down here!
 // But start new LESS files for major components.
 
 .headline {
 	margin: 16px 0;
-    border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .sandbox {
@@ -18,7 +19,6 @@
 	margin: 30px 0 20px;
 	padding:20px;
 	position: relative;
-
 	&:before {
 		background: lighten(@complementColor,50%);
 		border-radius: 0;
@@ -47,15 +47,17 @@
 	height: 130px;
 }
 
-.grid-demo .grid-col p {
-	border: 1px solid darken(@menuBackgroundColor,15%);
-	background: @menuBackgroundColor;
-	border-radius: 3px;
-	padding: 10px;
-	margin: 0;
-	height: 100%;
+.grid-demo .grid-col {
+  text-align: center;
+  p {
+    border: 1px solid darken(@menuBackgroundColor,15%);
+    background: @menuBackgroundColor;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 0;
+    height: 100%;
+  }
 }
-
 
 
 // => Projectspecific Media Queries
@@ -64,17 +66,13 @@
 }
 
 .media-mixin(@break) when (@break = @breakMedium) {
-
 }
 
 .media-mixin(@break) when (@break = @breakLarge) {
-
 }
 
 .media-mixin(@break) when (@break = @break2x) {
-
 }
 
 .media-mixin(@break) when (@break = @breakPrint) {
-
 }

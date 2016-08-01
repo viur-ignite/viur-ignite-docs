@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 
-	<title>VIUR Ignite CSS - Spinner</title>
+	<title>VIUR Ignite CSS - Pagination</title>
 
 	<!-- description -->
 	<meta name="description" content="This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.">
@@ -76,12 +76,12 @@
 <li class="menu-item menu2-item"><a class="menu-link" href="grid.html">Grid</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="boxes.html">Media Boxes</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="menus.html">Menu</a></li>
-<li class="menu-item menu2-item"><a class="menu-link" href="pagination.html">Pagination</a></li>
+<li class="menu-item menu2-item"><a class="menu-link is-active" href="pagination.html">Pagination</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="parallax.html">Parallax</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="popup.html">Popups</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="progress.html">Progressbar</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="slider.html">Slider</a></li>
-<li class="menu-item menu2-item"><a class="menu-link is-active" href="spinner.html">Spinner</a></li>
+<li class="menu-item menu2-item"><a class="menu-link" href="spinner.html">Spinner</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="tables.html">Table</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="tabs.html">Tabs</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="badges.html">Tooltips and Badges</a></li>
@@ -89,23 +89,42 @@
 
 				</ul>
 			</div>
-			<section class="content section">
-	<h1 class="headline">Spinner</h1>
-	<p>
-		A spinner helping to load content with AJAX etc.
-	</p>
-	<div class="sandbox is-busy js-codeChild">
-		<div class="spinner-overlay">
-			<div class="spinner">
-				<div class="spinner-square"></div>
-				<div class="spinner-square"></div>
-				<div class="spinner-square"></div>
-				<div class="spinner-square"></div>
-				<div class="spinner-square"></div>
-			</div>
+			<div class="content">
+	<section class="section">
+		<h1 class="headline">Pagination</h1>
+
+		<div class="sandbox js-codeChild">
+			<nav class="pagination">
+				<a class="pagination-btn btn" href="#">Previous</a>
+				<a class="pagination-btn btn" href="#">Next page</a>
+				<ul>
+					<li>
+						<a class="pagination-btn btn" href="#">1</a>
+					</li>
+					<li>
+						<span>...</span>
+					</li>
+					<li>
+						<a class="pagination-btn btn" href="#">9</a>
+					</li>
+					<li>
+						<a class="pagination-btn btn btn-vPrimary" href="#">10</a>
+					</li>
+					<li>
+						<a class="pagination-btn btn" href="#">11</a>
+					</li>
+					<li>
+						<span>...</span>
+					</li>
+					<li>
+						<a class="pagination-btn btn" href="#">15</a>
+					</li>
+				</ul>
+			</nav>
 		</div>
-	</div>
-</section>
+	</section>
+</div>
+
 		</div>
 	</article>
 

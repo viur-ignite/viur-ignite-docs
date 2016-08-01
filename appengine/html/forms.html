@@ -3,17 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
-	
+
 	<title>VIUR Ignite CSS - Forms</title>
-	
+
 	<!-- description -->
 	<meta name="description" content="This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.">
 	<meta name="keywords" content="VIUR, CSS, framework, vicss">
 	<meta name="robots" content="index, follow, noarchive" />
 
 	<!-- css -->
-	<link rel="stylesheet" href="../static/css/style.css">
-	
+	<link rel="stylesheet" href="../static/css/style.min.css">
+
 	<!-- favicon -->
 	<link rel="icon" type="image/png" sizes="192x192" href="../static/meta/android-chrome-192x192.png">
 	<link rel="manifest" href="../static/meta/manifest.json">
@@ -60,7 +60,7 @@
 		<div class="bind flex">
 			<input type="checkbox" id="nav-trigger" class="nav-trigger">
 			<label for="nav-trigger"></label>
-			<div class="sidebar">
+			<div class="sidebar menuWrapper">
 				<ul class="menu-list">
 					<li class="menu-item menu1-item"><a class="menu-link is-primary" href="index.html">Start</a></li>
 <li class="menu-item menu1-item"><a class="menu-link" href="gettingStarted.html">Getting Started</a></li>
@@ -76,6 +76,7 @@
 <li class="menu-item menu2-item"><a class="menu-link" href="grid.html">Grid</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="boxes.html">Media Boxes</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="menus.html">Menu</a></li>
+<li class="menu-item menu2-item"><a class="menu-link" href="pagination.html">Pagination</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="parallax.html">Parallax</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="popup.html">Popups</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="progress.html">Progressbar</a></li>
@@ -99,8 +100,8 @@
 		<p>This is a standard form.</p>
 		<div class="sandbox js-codeChild">
 			<form>
-				<label class="label">Label</label>
-				<input class="input" type="text" placeholder="Default input">
+				<label class="label" for="defaultinput">Label</label>
+				<input class="input" type="text" placeholder="Default input" id="defaultinput">
 				<input class="input input-vContrast" type="text" placeholder="Input with contrast">
 				<button class="btn" type="button">Button</button>
 			</form>
@@ -113,8 +114,8 @@
 		<p>This is a select menu.</p>
 		<div class="sandbox js-codeChild">
 			<form>
-				<label class="label">Select an option</label>
-				<select class="select">
+				<label class="label" for="select">Select an option</label>
+				<select class="select" id="select">
 					<option>Test</option>
 					<option>Test 2</option>
 					<option>Test</option>
@@ -129,8 +130,8 @@
 		<p>This is a small select menu.</p>
 		<div class="sandbox js-codeChild">
 			<form>
-				<label class="label label-vSmall">Select an option</label>
-				<select class="select select-vSmall">
+				<label class="label label-vSmall" for="selectSmall">Select an option</label>
+				<select class="select select-vSmall" id="selectSmall">
 					<option>Test</option>
 					<option>Test 2</option>
 					<option>Test</option>
@@ -146,18 +147,18 @@
 		<div class="sandbox js-codeChild">
 			<form>
 				<div class="inputGroup">
-					<label class="label" for="inputGroup-input">Label</label>
-					<input class="input" id="inputGroup-input" type="text" placeholder="Default input">
+					<label class="label" for="inputGroup-input1">Label</label>
+					<input class="input" id="inputGroup-input1" type="text" placeholder="Default input">
 					<button class="btn" type="button">Button</button>
 				</div>
 				<div class="inputGroup">
-					<label class="label is-required" for="inputGroup-input">This is required</label>
-					<input class="input" id="inputGroup-input" type="text" placeholder="Default input">
+					<label class="label is-required" for="inputGroup-input2">This is required</label>
+					<input class="input" id="inputGroup-input2" type="text" placeholder="Default input">
 					<button class="btn" type="button">Button</button>
 				</div>
 				<div class="inputGroup">
-					<label class="label has-icon i-heart" for="inputGroup-input">Label with icon</label>
-					<input class="input" id="inputGroup-input" type="text" placeholder="Default input">
+					<label class="label has-icon i-heart" for="inputGroup-input3">Label with icon</label>
+					<input class="input" id="inputGroup-input3" type="text" placeholder="Default input">
 					<button class="btn" type="button">Button</button>
 				</div>
 			</form>
@@ -217,16 +218,16 @@
 		<div class="sandbox js-codeChild">
 			<form>
 				<div class="inputGroup">
-					<label class="label is-invalid">Label</label>
-					<input class="input is-invalid" type="text" placeholder="Input">
+					<label class="label is-invalid" for="inputGroup-input4">Label</label>
+					<input class="input is-invalid" type="text" placeholder="Input" id="inputGroup-input4">
 				</div>
 				<div class="inputGroup">
-					<label class="label is-recommended">Label</label>
-					<input class="input is-recommended" type="text" placeholder="Input">
+					<label class="label is-recommended" for="inputGroup-input5">Label</label>
+					<input class="input is-recommended" type="text" placeholder="Input" id="inputGroup-input5">
 				</div>
 				<div class="inputGroup">
-					<label class="label is-valid">Label</label>
-					<input class="input is-valid" type="text" placeholder="Input">
+					<label class="label is-valid" for="inputGroup-input6">Label</label>
+					<input class="input is-valid" type="text" placeholder="Input" id="inputGroup-input6">
 				</div>
 			</form>
 		</div>
@@ -254,9 +255,9 @@
 		<div class="sandbox js-codeChild">
 			<form>
 				<div class="inputGroup">
-					<label class="label">Textarea1
+					<label class="label" for="textarea">Textarea1
 					</label>
-					<textarea class="textarea"></textarea>
+					<textarea class="textarea" id="textarea"></textarea>
 				</div>
 
 				<textarea class="textarea textarea-vBlock">Textarea as block.</textarea>
@@ -264,7 +265,7 @@
 		</div>
 	</section>
 
-	
+
 	<section class="section">
 		<h2 class="subline">Form actions</h2>
 		<p>Use formActions to float submit buttons to the right at the end of your form.</p>
@@ -279,9 +280,10 @@
 	</section>
 
 </div>
+
 		</div>
 	</article>
-	
+
 	<!-- js -->
 	<script src="../static/js/jquery-3.1.0.min.js"></script>
 	<script src="../static/js/shCore.js"></script>

@@ -52,7 +52,7 @@ gulp.task('html', function () {
 
 // create source folder with prototype style.less
 // create source folder with prototype app.js
-// create source folder with prototype style.less
+// create source folder with icons
 gulp.task('init', function () {
 	VIUR.css.init();
 	VIUR.js.init();
