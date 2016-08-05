@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 
-	<title>VIUR Ignite CSS - Breadcrumbs</title>
+	<title>VIUR Ignite CSS - Image</title>
 
 	<!-- description -->
 	<meta name="description" content="This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.">
@@ -70,11 +70,11 @@
 				</ul>
 				<ul class="menu-list">
 					<li class="menu-item menu2-item"><a class="menu-link"href="messages.html">Alerts and Messages</a></li>
-<li class="menu-item menu2-item"><a class="menu-link is-active"href="breadcrumb.html">Breadcrumbs</a></li>
+<li class="menu-item menu2-item"><a class="menu-link"href="breadcrumb.html">Breadcrumbs</a></li>
 <li class="menu-item menu2-item"><a class="menu-link"href="buttons.html">Buttons</a></li>
 <li class="menu-item menu2-item"><a class="menu-link"href="forms.html">Forms</a></li>
 <li class="menu-item menu2-item"><a class="menu-link"href="grid.html">Grid</a></li>
-<li class="menu-item menu2-item"><a class="menu-link"href="image.html">Image</a></li>
+<li class="menu-item menu2-item"><a class="menu-link is-active"href="image.html">Image</a></li>
 <li class="menu-item menu2-item"><a class="menu-link"href="boxes.html">Media Boxes</a></li>
 <li class="menu-item menu2-item"><a class="menu-link"href="menus.html">Menu</a></li>
 <li class="menu-item menu2-item"><a class="menu-link"href="pagination.html">Pagination</a></li>
@@ -90,20 +90,67 @@
 
 				</ul>
 			</div>
-			<div class="content section">
-	<h1 class="headline">Breadcrumb</h1>
-	<p>To show the user where he is, use breadcrumbs!</p>
+			<div class="content">
+	<section class="section">
+		<h1 class="headline">Image</h1>
+	</section>
 
-	<div class="sandbox js-codeChild">
-		<ul class="breadcrumb">
-			<li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
-			<li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Vehicles</a></li>
-			<li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Vans</a></li>
-			<li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Camper Vans</a></li>
-			<li class="breadcrumb-item"><a class="breadcrumb-link" href="#">1989 VW Westfalia Vanagon</a></li>
-		</ul>
-	</div>
+	<section class="section">
+		<h2 class="subline">Thumbnails</h2>
+		<div class="sandbox js-codeChild">
+			<div class="grid-row">
+				<div class="grid-col grid-col-one-third">
+					<figure class="thumbnail">
+						<img class="thumbnail-img" src="../static/images/placeholder.svg" alt="Image">
+					</figure>
+				</div>
+				<div class="grid-col grid-col-one-third">
+					<figure class="thumbnail">
+						<img class="thumbnail-img" src="../static/images/placeholder.svg" alt="Image">
+						<figcaption class="thumbnail-caption">
+							<h3 class="subline">Image with Caption</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="grid-col grid-col-one-third">
+					<a href="#">
+						<figure class="thumbnail">
+							<img class="thumbnail-img" src="../static/images/placeholder.svg" alt="Image">
+							<figcaption class="thumbnail-caption">
+								<h3 class="subline">Thumbnail with Link</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.</p>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<h2 class="subline">Image Shaped</h2>
+		<div class="sandbox js-codeChild">
+			<div class="grid-row">
+				<div class="grid-col grid-col-one-quarter">
+					<img class="img-rounded" src="../static/images/placeholder.svg" alt="Image">
+				</div>
+				<div class="grid-col grid-col-one-quarter">
+					<img class="img-circle" src="../static/images/placeholder.svg" alt="Image">
+				</div>
+				<div class="grid-col grid-col-one-quarter">
+					<img class="img-thumbnail" src="../static/images/placeholder.svg" alt="Image">
+				</div>
+				<div class="grid-col grid-col-one-quarter">
+					<img class="img-thumbnail has-caption" src="../static/images/placeholder.svg" alt="Image" title="Picture">
+				</div>
+			</div>
+		</div>
+	</section>
 </div>
+
 		</div>
 	</article>
 

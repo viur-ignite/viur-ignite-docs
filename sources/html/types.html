@@ -62,7 +62,22 @@
 				<ins>This line of text is meant to be treated as an addition to the document.</ins>
 			</p>
 			<p><small>This line of text is meant to be treated as fine print.</small></p>
-			<p><code>This line is pure code.</code></p>
+			<p>This line has an <code>inline code</code> element.</p>
+			<p>Press <kbd>ctrl</kbd> + <kbd>S</kbd> to save your document.</p>
+			<p>
+				Press <kbd class="kbd-vDark">ctrl</kbd> + <kbd class="kbd-vDark">N</kbd>
+				to create a new document.
+			</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<h2 class="subline">Block text elements</h2>
+		<p>This is an example of block text elements.</p>
+		<div class="sandbox js-codeChild">
+<pre>This Block is a pure Codeblock
+on multiple lines
+to represent code.</pre>
 		</div>
 	</section>
 
@@ -71,8 +86,13 @@
 		<h2 class="subline">Blockquote</h2>
 		<p>This is an example of a blockquote.</p>
 		<div class="sandbox js-codeChild">
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+			<blockquote cite="https://groups.google.com/forum/#!original/comp.lang.perl.misc/5vPTrjRdnjY/88xwcrF5aA8J">
+				<p>Perl is worse than Python because people wanted it worse.</p>
+				<cite>
+					<a href="https://groups.google.com/forum/#!original/comp.lang.perl.misc/5vPTrjRdnjY/88xwcrF5aA8J">
+						Larry Wall - creator of the Perl programming language
+					</a>
+				</cite>
 			</blockquote>
 		</div>
 	</section>
