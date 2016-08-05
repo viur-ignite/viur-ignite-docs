@@ -8,14 +8,18 @@
 // Put all your custom CSS down here!
 // But start new LESS files for major components.
 
-.headline {
-	margin: 16px 0;
+h1.headline {
   border-bottom: 1px solid #eeeeee;
+}
+
+// no margin and no project styles
+.demo-headline {
+  h1, h2, h3, h4, h5, h6 {margin: 0;border:none;}
 }
 
 .sandbox {
 	background: @backgroundColor;
-	border:1px solid lighten(@complementColor,40%);
+	border: 1px solid lighten(@complementColor,40%);
 	margin: 30px 0 20px;
 	padding: 20px;
 	position: relative;
@@ -42,7 +46,7 @@
 }
 
 .grid-demo .grid-col {
-  text-align: center;
+  .txt-center;
   p {
     border: 1px solid darken(@menuBackgroundColor,15%);
     background: @menuBackgroundColor;

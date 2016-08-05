@@ -438,8 +438,15 @@ h6{
   color:inherit;
   font-family:'Source Sans Pro', 'Open Sans', sans-serif;
   font-weight:normal;
-  font-size:1em;
   line-height:1.6;
+}
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child),
+h5:not(:first-child),
+h6:not(:first-child){
+  margin-top:1.5em;
 }
 h1 a,
 h2 a,
@@ -450,23 +457,34 @@ h6 a{
   font-weight:inherit;
   color:inherit;
 }
+h1{
+  font-size:2.1em;
+  margin-bottom:1em;
+}
+h2{
+  font-size:1.7em;
+  margin-bottom:.5em;
+}
+h3{
+  font-size:1.5em;
+  margin-bottom:.25em;
+}
+h4{
+  font-size:1.2em;
+}
+h5{
+  font-size:1.15em;
+}
+h6{
+  font-size:1em;
+}
 .headline{
   font-family:'Source Sans Pro', 'Open Sans', sans-serif;
   color:#d00f1c;
-  font-size:2.1em;
-  line-height:1.3;
 }
 .subline{
   font-family:'Source Sans Pro', 'Open Sans', sans-serif;
-  color:#d00f1c;
-  font-size:1.7em;
-  line-height:1.3;
-}
-.heading{
-  font-family:'Source Sans Pro', 'Open Sans', sans-serif;
-  color:#333;
-  font-size:1.5em;
-  line-height:1.3;
+  color:#666666;
 }
 .lead{
   font-size:1.3em;
@@ -1158,6 +1176,13 @@ ol.is-list{
   width:100%;
   margin:0;
 }
+.label + .input-vBlock{
+  width:calc(100% - 154px);
+}
+.label + .textarea-vBlock{
+  width:calc(100% - 150px);
+  margin-top:6px;
+}
 .label{
   vertical-align:middle;
   display:inline-block;
@@ -1323,6 +1348,8 @@ ol.is-list{
 .note{
   font-size:0.8em;
   margin:0;
+}
+.note-vOffset{
   padding-left:22px;
 }
 .switch{
@@ -1458,7 +1485,7 @@ ol.is-list{
 }
 .tableHead-cell{
   border:0px solid #890a12;
-  border-width:0px 0px 1px 1px;
+  border-width:1px 1px 1px 0;
   font-weight:bold;
   color:#ffffff;
   text-align:center;
@@ -1468,10 +1495,7 @@ ol.is-list{
   padding:4px 10px;
 }
 .tableHead-cell:first-of-type{
-  border-width:0px 0px 1px 0px;
-}
-.tableHead-cell:last-of-type{
-  border-width:0px 0px 1px 1px;
+  border-left-width:1px !important;
 }
 .tableBody-row:nth-of-type(even){
   background-color:#f9f9f9;
@@ -1500,7 +1524,7 @@ ol.is-list{
 .tableBody-cell{
   vertical-align:middle;
   border:1px solid #d8d8d8;
-  border-width:0px 1px 1px 0px;
+  border-width:0 1px 1px 0;
   text-align:left;
   padding:5px 10px;
   font-weight:normal;
@@ -1509,19 +1533,50 @@ ol.is-list{
 .tableBody-row.is-active .tableBody-cell{
   color:#000000;
 }
-.tableBody-row:last-of-type .tableBody-cell{
-  border-width:0px 1px 0px 0px;
-}
-.tableBody-row .tableBody-cell:last-of-type{
-  border-width:0px 0px 1px 0px;
-}
-.tableBody-row:last-of-type .tableBody-cell:last-of-type{
-  border-width:0px 0px 0px 0px;
+.tableBody-row .tableBody-cell:first-of-type{
+  border-left-width:1px;
 }
 .tableLink{
   display:block;
   padding:8px;
   color:#000000;
+}
+.table-vNoborder .tableHead-cell,
+.table-vNoborder .tableBody-cell{
+  border-width:0;
+}
+.table-vNoborder .tableHead-cell:last-of-type,
+.table-vNoborder .tableBody-cell:last-of-type{
+  border-right-width:1px;
+}
+.table-vNoborder .tableBody-row:last-of-type .tableBody-cell{
+  border-bottom-width:1px;
+}
+.table-vNoborder .tableHead-row:first-of-type .tableHead-cell{
+  border-top-width:1px;
+}
+.table-vNoborder .tableHead-row .tableHead-cell:first-of-type{
+  border-left-width:1px;
+}
+.table-vNoXborder .tableHead-cell,
+.table-vNoXborder .tableBody-cell{
+  border-top-width:0;
+  border-bottom-width:0;
+}
+.table-vNoXborder .tableHead-row:first-of-type .tableHead-cell{
+  border-top-width:1px;
+}
+.table-vNoXborder .tableBody-row:last-of-type .tableBody-cell{
+  border-bottom-width:1px;
+}
+.table-vNoYborder .tableHead-cell,
+.table-vNoYborder .tableBody-cell{
+  border-left-width:0;
+  border-right-width:0;
+}
+.table-vNoYborder .tableHead-cell:last-of-type,
+.table-vNoYborder .tableBody-cell:last-of-type{
+  border-right-width:1px;
 }
 .tip{
   position:relative;
@@ -2774,9 +2829,6 @@ label[for="nav-trigger"]{
   flex:1;
   text-align:left;
 }
-.media-content [class^="h"]{
-  margin:0 0 0 2em;
-}
 .media-descr{
   font-size:.8em;
 }
@@ -3909,9 +3961,17 @@ a:hover .thumbnail,a:focus .thumbnail{
   margin:0;
   display:none;
 }
-.headline{
-  margin:16px 0;
+h1.headline{
   border-bottom:1px solid #eeeeee;
+}
+.demo-headline h1,
+.demo-headline h2,
+.demo-headline h3,
+.demo-headline h4,
+.demo-headline h5,
+.demo-headline h6{
+  margin:0;
+  border:none;
 }
 .sandbox{
   background:#fafafa;
@@ -4032,6 +4092,8 @@ a:hover .thumbnail,a:focus .thumbnail{
     box-shadow:none;
   }
   .input,
+  .label + .input-vBlock,
+  .label + .textarea-vBlock,
   .select,
   .switch,
   .radio{

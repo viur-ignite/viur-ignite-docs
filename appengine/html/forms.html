@@ -3,13 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+	<meta name="theme-color" content="#d00f1c">
+	<meta name="msapplication-TileColor" content="#d00f1c">
 
-	<title>VIUR Ignite CSS - Forms</title>
+	<title>VIUR Ignite Docs - Forms</title>
 
 	<!-- description -->
-	<meta name="description" content="This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.">
-	<meta name="keywords" content="VIUR, CSS, framework, vicss">
-	<meta name="robots" content="index, follow, noarchive" />
+	<meta name="application-name" content="VIUR Ignite Docs">
+	<meta name="apple-mobile-web-app-title" content="VIUR Ignite Docs">
+	<meta name="description" content="VIUR Ignite CSS - The first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. Official Documentation">
+	<meta name="keywords" content="VIUR, Ignite, Docs, CSS, LESS, framework, NPM">
+	<meta name="robots" content="index, follow, noarchive">
 
 	<!-- css -->
 	<link rel="stylesheet" href="../static/css/style.min.css">
@@ -18,8 +22,6 @@
 	<link rel="icon" type="image/png" sizes="192x192" href="../static/meta/android-chrome-192x192.png">
 	<link rel="manifest" href="../static/meta/manifest.json">
 	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="theme-color" content="#d00f1c">
-	<meta name="application-name" content="VIUR Ignite Docs">
 	<link rel="apple-touch-icon" sizes="57x57" href="../static/meta/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="../static/meta/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="../static/meta/apple-touch-icon-72x72.png">
@@ -31,7 +33,6 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="../static/meta/apple-touch-icon-180x180.png">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="apple-mobile-web-app-title" content="VIUR Ignite Docs">
 	<link rel="icon" type="image/png" sizes="228x228" href="../static/meta/coast-228x228.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="../static/meta/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="../static/meta/favicon-32x32.png">
@@ -40,7 +41,6 @@
 	<link rel="shortcut icon" href="../static/meta/favicon.ico">
 	<meta property="twitter:image" content="../static/meta/twitter.png">
 	<link rel="yandex-tableau-widget" href="../static/meta/yandex-browser-manifest.json">
-	<meta name="msapplication-TileColor" content="#d00f1c">
 	<meta name="msapplication-TileImage" content="../static/meta/mstile-144x144.png">
 	<meta name="msapplication-config" content="../static/meta/browserconfig.xml">
 	<meta property="og:image" content="../static/meta/open-graph.png">
@@ -56,7 +56,7 @@
 	<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="../static/meta/apple-touch-startup-image-1536x2008.png">
 </head>
 <body>
-	<article class="wrap">
+	<div class="wrap">
 		<div class="bind flex">
 			<input type="checkbox" id="nav-trigger" class="nav-trigger">
 			<label for="nav-trigger"></label>
@@ -93,11 +93,8 @@
 			<div class="content">
 	<section class="section">
 		<h1 class="headline">Forms</h1>
-	</section>
 
-
-	<section class="section">
-		<h2 class="subline">Default Form</h2>
+		<h2 class="headline">Default Form</h2>
 		<p>This is a standard form.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -105,13 +102,14 @@
 				<input class="input" type="text" placeholder="Default input" id="defaultinput">
 				<input class="input input-vContrast" type="text" placeholder="Input with contrast">
 				<button class="btn" type="button">Button</button>
+				<p class="note">This is an informative note.</p>
 			</form>
 		</div>
 	</section>
 
 
 	<section class="section">
-		<h2 class="subline">Selection</h2>
+		<h2 class="headline">Selection</h2>
 		<p>This is a select menu.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -127,7 +125,7 @@
 
 
 	<section class="section">
-		<h2 class="subline">Small selection</h2>
+		<h2 class="headline">Small selection</h2>
 		<p>This is a small select menu.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -143,7 +141,7 @@
 
 
 	<section class="section">
-		<h2 class="subline">Input connected with button</h2>
+		<h2 class="headline">Input connected with button</h2>
 		<p>This is an input directly connected to a button.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -168,7 +166,7 @@
 
 
 	<section class="section">
-		<h2 class="subline">Small input</h2>
+		<h2 class="headline">Small input</h2>
 		<p>This is a small input.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -179,7 +177,7 @@
 
 
 	<section class="section">
-		<h2 class="subline">Large input</h2>
+		<h2 class="headline">Large input</h2>
 		<p>This is a large input.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -190,7 +188,7 @@
 
 
 	<section class="section">
-		<h2 class="subline">Disabled and read-only inputs</h2>
+		<h2 class="headline">Disabled and read-only inputs</h2>
 		<p>This is a disabled and a read-only input.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -203,18 +201,22 @@
 
 
 	<section class="section">
-		<h2 class="subline">Block input</h2>
+		<h2 class="headline">Block input</h2>
 		<p>This is a block input.</p>
 		<div class="sandbox js-codeChild">
 			<form>
 				<p><input class="input input-vBlock" type="text" placeholder="Block input"/></p>
+				<p>
+					<label class="label is-disabled" for="inlineblock-input">Label</label>
+					<input class="input input-vBlock" type="text" placeholder="Block input next to Label" id="inlineblock-input">
+				</p>
 			</form>
 		</div>
 	</section>
 
 
 	<section class="section">
-		<h2 class="subline">Error, recommended and accepted on input</h2>
+		<h2 class="headline">Error, recommended and accepted on input</h2>
 		<p>These are examples for an error, a recommendation and an accepted status.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -236,7 +238,7 @@
 
 
 	<section class="section">
-		<h2 class="subline">Checkbox</h2>
+		<h2 class="headline">Checkbox</h2>
 		<p>This is an example of an checkbox.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -244,13 +246,14 @@
 					<input id="check1" class="checkbox" type="checkbox">
 					Test checkbox
 				</label>
-				<p class="note">This is an informative note.</p>
+				<p class="note note-vOffset">This is an informative note.</p>
 			</form>
 		</div>
 	</section>
 
+
 	<section class="section">
-		<h2 class="subline">Switch</h2>
+		<h2 class="headline">Switch</h2>
 		<p>This is a simple, yet elegant, boolean switch.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -265,8 +268,9 @@
 		</div>
 	</section>
 
+
 	<section class="section">
-		<h2 class="subline">Radio</h2>
+		<h2 class="headline">Radio</h2>
 		<p>These are simple radio buttons. You may group them.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -291,8 +295,9 @@
 		</div>
 	</section>
 
+
 	<section class="section">
-		<h2 class="subline">Textarea</h2>
+		<h2 class="headline">Textarea</h2>
 		<p>This is an example of a textarea.</p>
 		<div class="sandbox js-codeChild">
 			<form>
@@ -309,7 +314,7 @@
 
 
 	<section class="section">
-		<h2 class="subline">Form actions</h2>
+		<h2 class="headline">Form actions</h2>
 		<p>Use formActions to float submit buttons to the right at the end of your form.</p>
 		<div class="msg msg-vError has-icon i-cross">
 			<h3 class="msg-headline">Deprecated!</h3>
@@ -324,11 +329,10 @@
 			</form>
 		</div>
 	</section>
-
 </div>
 
 		</div>
-	</article>
+	</div>
 
 	<!-- js -->
 	<script src="../static/js/jquery-3.1.0.min.js"></script>
