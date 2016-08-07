@@ -23,6 +23,7 @@
 		"breadcrumb.html" : "Breadcrumbs",
 		"slider.html" : "Slider",
 		"pagination.html" : "Pagination",
-		"image.html" : "Image"
+		"image.html" : "Image",
+		"helper.html" : "Helper"
 	}
 }
