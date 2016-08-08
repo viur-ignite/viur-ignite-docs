@@ -1,7 +1,7 @@
 $(function() {
 	$.fn.outerHTML = function(s) {
-		return (s) 
-			? this.before(s).remove() 
+		return (s)
+			? this.before(s).remove()
 			: $('<p>').append(this.eq(0).clone()).html();
 	}
 })
@@ -60,21 +60,21 @@ $(function() {
 		}
 	});
 
-	$('.open-popup').click(function () {
+	$('.open-popup').on('click', function () {
 		$.createPopup({
 			title: 'MESSAGE',
 			content: 'THIS IS A MESSAGE',
 			footer: 'THE FOOTER',
 			button: [
-				{title:'BTN1', class: "bt1-class", onClick: function(){ console.debug('clicked btn1'); }},
-				{title:'BTN2', class: "bt2-class", onClick: function(){ console.debug('clicked btn2'); }, style: 'opacity: .5;'},
+				{title:'BTN1', class: "bt1-class", onClick: function(){console.debug('clicked btn1');}},
+				{title:'BTN2', class: "bt2-class", onClick: function(){console.debug('clicked btn2');}, style: 'opacity: .5;'},
 				{custom: '<button class="btn" style="padding:5px 15px;">mybutton</button>'}
 			],
 			onOpen: function() {
-				console.info('opened 2');
+				console.info('opened new popup');
 			},
 			onClose: function() {
-				console.info('closed 2');
+				console.info('closed new popup');
 			}
 		});
 	});

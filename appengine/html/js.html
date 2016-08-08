@@ -3,23 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
-	
-	<title>VIUR Ignite CSS - JS</title>
-	
+	<meta name="theme-color" content="#d00f1c">
+	<meta name="msapplication-TileColor" content="#d00f1c">
+
+	<title>VIUR Ignite Docs - JS</title>
+
 	<!-- description -->
-	<meta name="description" content="This is the first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.">
-	<meta name="keywords" content="VIUR, CSS, framework, vicss">
-	<meta name="robots" content="index, follow, noarchive" />
+	<meta name="application-name" content="VIUR Ignite Docs">
+	<meta name="apple-mobile-web-app-title" content="VIUR Ignite Docs">
+	<meta name="description" content="VIUR Ignite CSS - The first attempt in building a sturdy foundation of CSS (LESS) for ViUR products and Mausbrand projects. Official Documentation">
+	<meta name="keywords" content="VIUR, Ignite, Docs, CSS, LESS, framework, NPM">
+	<meta name="robots" content="index, follow, noarchive">
 
 	<!-- css -->
 	<link rel="stylesheet" href="../static/css/style.css">
-	
+
 	<!-- favicon -->
 	<link rel="icon" type="image/png" sizes="192x192" href="../static/meta/android-chrome-192x192.png">
 	<link rel="manifest" href="../static/meta/manifest.json">
 	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="theme-color" content="#d00f1c">
-	<meta name="application-name" content="VIUR Ignite Docs">
 	<link rel="apple-touch-icon" sizes="57x57" href="../static/meta/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="../static/meta/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="../static/meta/apple-touch-icon-72x72.png">
@@ -31,7 +33,6 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="../static/meta/apple-touch-icon-180x180.png">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="apple-mobile-web-app-title" content="VIUR Ignite Docs">
 	<link rel="icon" type="image/png" sizes="228x228" href="../static/meta/coast-228x228.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="../static/meta/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="../static/meta/favicon-32x32.png">
@@ -40,7 +41,6 @@
 	<link rel="shortcut icon" href="../static/meta/favicon.ico">
 	<meta property="twitter:image" content="../static/meta/twitter.png">
 	<link rel="yandex-tableau-widget" href="../static/meta/yandex-browser-manifest.json">
-	<meta name="msapplication-TileColor" content="#d00f1c">
 	<meta name="msapplication-TileImage" content="../static/meta/mstile-144x144.png">
 	<meta name="msapplication-config" content="../static/meta/browserconfig.xml">
 	<meta property="og:image" content="../static/meta/open-graph.png">
@@ -56,11 +56,11 @@
 	<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="../static/meta/apple-touch-startup-image-1536x2008.png">
 </head>
 <body>
-	<article class="wrap">
+	<div class="wrap">
 		<div class="bind flex">
 			<input type="checkbox" id="nav-trigger" class="nav-trigger">
 			<label for="nav-trigger"></label>
-			<div class="sidebar">
+			<div class="sidebar menuWrapper">
 				<ul class="menu-list">
 					<li class="menu-item menu1-item"><a class="menu-link is-primary" href="index.html">Start</a></li>
 <li class="menu-item menu1-item"><a class="menu-link" href="gettingStarted.html">Getting Started</a></li>
@@ -74,8 +74,11 @@
 <li class="menu-item menu2-item"><a class="menu-link" href="buttons.html">Buttons</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="forms.html">Forms</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="grid.html">Grid</a></li>
+<li class="menu-item menu2-item"><a class="menu-link" href="helper.html">Helper</a></li>
+<li class="menu-item menu2-item"><a class="menu-link" href="image.html">Image</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="boxes.html">Media Boxes</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="menus.html">Menu</a></li>
+<li class="menu-item menu2-item"><a class="menu-link" href="pagination.html">Pagination</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="parallax.html">Parallax</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="popup.html">Popups</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="progress.html">Progressbar</a></li>
@@ -94,8 +97,21 @@
 			</div>
 			<div class="content" id="content">
 	<section class="section">
-		<h1 class="headline">JS testing area</h1>
+		<h1 class="headline has-marker" aria-label="JS">JS testing area</h1>
 
+		<h2 class="headline">ScrollToAnchor</h2>
+		<div class="grid-row">
+			<div class="grid-col grid-col-half">
+				<p><a href="#p1">p 1</a></p>
+				<p><a href="#p2">p 2</a></p>
+				<p><a href="#p3">p 3</a></p>
+			</div>
+			<div class="grid-col grid-col-half">
+				<p><a href="#div1">div 1</a></p>
+				<p><a href="#div2">div 2</a></p>
+				<p><a href="#div3">div 3</a></p>
+			</div>
+		</div>
 
 		<p id="p1">Paragraph 1</p>
 		<div id="div1">
@@ -113,36 +129,30 @@
 		</div>
 
 
-		<h2 class="subline">ScrollToAnchor</h2>
-		<div class="grid-row">
-			<div class="grid-col grid-col-half">
-				<p><a href="#p1">p 1</a></p>
-				<p><a href="#p2">p 2</a></p>
-				<p><a href="#p3">p 3</a></p>
-			</div>
-			<div class="grid-col grid-col-half">
-				<p><a href="#div1">div 1</a></p>
-				<p><a href="#div2">div 2</a></p>
-				<p><a href="#div3">div 3</a></p>
-			</div>
-		</div>
-
+		<h2 class="headline">Popup</h2>
 		<p class="btn open-popup">Open a Popup</p>
 
-		<div class="test">
-			<div>öfwqfek</div>
-		</div>
 
+		<h2 class="headline">Toogle</h2>
+		<p class="btn" data-toggler=".div-toggle">click me</p>
+		<div class="div-toggle" data-toggle="hidden">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
 	</section>
 </div>
 
 		</div>
-	</article>
-	
+	</div>
+
 	<!-- js -->
 	<script src="../static/js/jquery-3.1.0.min.js"></script>
 	<script src="../static/js/shCore.js"></script>
 	<script src="../static/js/shBrushXml.js"></script>
-	<script src="../static/js/app.js"></script>
+	<script src="../static/js/app.min.js"></script>
 </body>
 </html>
