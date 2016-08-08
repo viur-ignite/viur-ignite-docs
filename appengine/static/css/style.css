@@ -1561,7 +1561,7 @@ ol.is-list {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
 }
 
-.select.select-vSmall {
+.select-vSmall {
   padding: 3px 7px 4px;
   font-size: .8em;
   font-weight: 400;
@@ -1586,7 +1586,7 @@ ol.is-list {
 .inputGroup .label,
 .inputGroup .switch,
 .inputGroup > .radio,
-.inputGroup .radioGroup {
+.inputGroup .optionGroup {
   margin: 6px 0px;
   float: left;
   position: relative;
@@ -1597,7 +1597,7 @@ ol.is-list {
 .inputGroup .textarea,
 .inputGroup .switch,
 .inputGroup > .radio,
-.inputGroup .radioGroup {
+.inputGroup .optionGroup {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -1750,26 +1750,118 @@ ol.is-list {
   border: 2px solid #69c260;
 }
 
-.radioGroup {
+.check {
+  margin: 6px 0;
+  vertical-align: middle;
+  display: inline-block;
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  color: #000000;
+}
+
+.check-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.check-label {
+  position: relative;
+  display: inline-block;
+  padding: 7px 14px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.check-label:before {
+  content: '';
+  background: #fff;
+  border: 2px solid #e6e6e6;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  margin-right: 10px;
+  margin-top: -2px;
+  text-align: center;
+  transition: all .4s ease;
+  box-shadow: inset 0px 0px 0px 2px #fff;
+}
+
+.check-label:hover,
+.check-label:focus {
+  background-color: #ffffff;
+}
+
+.check-input:checked + .check-label:before {
+  background: #8cd085;
+  border: 2px solid #69c260;
+}
+
+.optionGroup {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
-.radioGroup .radio {
+.optionGroup .check,
+.optionGroup .radio {
   margin: 0;
   border-width: 0 1px;
 }
 
-.radioGroup .radio:first-child {
+.optionGroup .check:first-child,
+.optionGroup .radio:first-child {
   border-width: 1px;
   border-bottom-width: 0;
 }
 
-.radioGroup .radio:last-child {
+.optionGroup .check:last-child,
+.optionGroup .radio:last-child {
   border-width: 1px;
   border-top-width: 0;
+}
+
+.optionGroup-vSelectionList {
+  max-height: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.optionGroup-vSelectionList .radio,
+.optionGroup-vSelectionList .check {
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.optionGroup-vSelectionList .radio-label,
+.optionGroup-vSelectionList .check-label {
+  white-space: nowrap;
+  padding-right: 30px;
+}
+
+.optionGroup-vSelectionList .radio:not(:last-child) .radio-label,
+.optionGroup-vSelectionList .check:not(:last-child) .check-label {
+  border-bottom: 1px solid #cccccc;
+}
+
+.optionGroup-vSelectionList .radio-label:before,
+.optionGroup-vSelectionList .check-label:before {
+  content: none;
+}
+
+.optionGroup-vSelectionList .radio-input:checked + .radio-label,
+.optionGroup-vSelectionList .check-input:checked + .check-label {
+  background: #8cd085;
+  border-bottom: 1px solid #69c260;
+  color: #fff;
+}
+
+.optionGroup-vSelectionList .radio-input:checked + .radio-label:hover,
+.optionGroup-vSelectionList .check-input:checked + .check-label:hover,
+.optionGroup-vSelectionList .radio-input:checked + .radio-label:focus,
+.optionGroup-vSelectionList .check-input:checked + .check-label:focus {
+  background-color: #69c260;
 }
 
 .formActions:after {
@@ -2644,7 +2736,7 @@ ol.is-list {
   overflow-x: hidden;
   overflow-y: auto;
   color: #222222;
-  font-size: .9rem;
+  font-size: .9em;
 }
 
 .popup-content:before {
@@ -2672,7 +2764,7 @@ ol.is-list {
   background-color: #d4d4d4;
   border-top: 1px solid #bababa;
   color: #222222;
-  font-size: .8rem;
+  font-size: .8em;
 }
 
 .popup-close {
@@ -2706,6 +2798,48 @@ ol.is-list {
   background-repeat: no-repeat;
   background-color: inherit;
   background-blend-mode: multiply;
+}
+
+.popup-vSmall {
+  font-size: .8rem;
+}
+
+.popup-vSmall .popup-content {
+  padding: 10px;
+}
+
+.popup-vSmall .popup-header {
+  padding: 10px;
+}
+
+.popup-vSmall .popup-footer {
+  padding: 2px 10px;
+}
+
+.popup-vSmall .btn {
+  padding: 3px 11px;
+  font-weight: 400;
+}
+
+.popup-vSmall .input {
+  padding: 3px 7px;
+  font-weight: 400;
+}
+
+.popup-vSmall .label {
+  padding: 3px 7px;
+  font-weight: 400;
+}
+
+.popup-vSmall .select {
+  padding: 3px 7px 4px;
+  font-weight: 400;
+  background-size: 10px;
+}
+
+.popup-vLarge {
+  font-size: 1.2rem;
+  max-width: 650px;
 }
 
 .msg-vPopup {
@@ -5074,7 +5208,8 @@ h1.headline {
   .inputGroup .switch,
   .inputGroup .textarea,
   .inputGroup > .radio,
-  .inputGroup .radioGroup {
+  .inputGroup > .check,
+  .inputGroup .optionGroup {
     box-shadow: none;
   }
 
@@ -5095,8 +5230,10 @@ h1.headline {
   .inputGroup .switch,
   .inputGroup .textarea,
   .inputGroup > .radio,
-  .inputGroup .radioGroup,
-  .radioGroup .radio {
+  .inputGroup > .check,
+  .inputGroup .optionGroup,
+  .optionGroup .radio,
+  .optionGroup .check {
     width: 100%;
     margin: 0;
   }
