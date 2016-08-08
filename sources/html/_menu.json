@@ -22,6 +22,8 @@
 		"tabs.html" : "Tabs",
 		"breadcrumb.html" : "Breadcrumbs",
 		"slider.html" : "Slider",
-		"pagination.html" : "Pagination"
+		"pagination.html" : "Pagination",
+		"image.html" : "Image",
+		"helper.html" : "Helper"
 	}
 }

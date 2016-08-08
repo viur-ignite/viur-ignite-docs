@@ -8,16 +8,20 @@
 // Put all your custom CSS down here!
 // But start new LESS files for major components.
 
-.headline {
-	margin: 16px 0;
+h1.headline {
   border-bottom: 1px solid #eeeeee;
+}
+
+// no margin and no project styles
+.demo-headline {
+  h1, h2, h3, h4, h5, h6 {margin: 0;border:none;}
 }
 
 .sandbox {
 	background: @backgroundColor;
-	border:1px solid lighten(@complementColor,40%);
+	border: 1px solid lighten(@complementColor,40%);
 	margin: 30px 0 20px;
-	padding:20px;
+	padding: 20px;
 	position: relative;
 	&:before {
 		background: lighten(@complementColor,50%);
@@ -37,18 +41,12 @@
 	}
 }
 
-.code {
-	padding: 10px 20px;
-	background: darken(@backgroundColor,5%);
-	margin-bottom: 10px;
-}
-
 .placeholder {
 	height: 130px;
 }
 
 .grid-demo .grid-col {
-  text-align: center;
+  .txt-center;
   p {
     border: 1px solid darken(@menuBackgroundColor,15%);
     background: @menuBackgroundColor;
@@ -58,7 +56,23 @@
     height: 100%;
   }
 }
+.center-demo-wrapper {
+  background: #eee;
+  min-height: 200px;
+  > div {
+    background: #333;
+    height: 50px;
+    width: 50px;
+  }
+}
 
+.color-demo {
+  height: 20px;
+  width: 20px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin-right: 5px;
+}
 
 // => Projectspecific Media Queries
 

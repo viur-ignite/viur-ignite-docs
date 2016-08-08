@@ -13,22 +13,34 @@
 
 
 	<section class="section">
-		<h2 class="subline">Headlines and sublines</h2>
+		<h2 class="headline">Headlines and sublines</h2>
 		<p>These are the standard headlines.</p>
-		<div class="sandbox js-codeChild">
+		<div class="sandbox js-codeChild demo-headline">
 			<h1 class="headline">The headline! Use only <strong>one</strong> on every page (h1)</h1>
-			<h2 class="subline">A minor headline. Use them as often as you like. (h2)</h2>
-			<h3 class="heading">A subline to your headline. (h3)</h3>
-			<h4 class="heading">All other headlines. (h4, 5, 6)</h4>
+			<h2 class="headline">Second level Headline (h2)</h2>
+			<h3 class="headline">Third level Headline (h3)</h3>
+			<h4 class="headline">Fourth level Headline (h4)</h4>
+			<h5 class="headline">Fifth level Headline (h5)</h5>
+			<h6 class="headline">Sixth level Headline (h6)</h6>
+
+			<h1 class="subline">The Subline to your headline! (h1)</h1>
+			<h2 class="subline">Second level Subline (h2)</h2>
+			<h3 class="subline">Third level Subline (h3)</h3>
+			<h4 class="subline">Fourth level Subline (h4)</h4>
+			<h5 class="subline">Fifth level Subline (h5)</h5>
+			<h6 class="subline">Sixth level Subline (h6)</h6>
 		</div>
 		<div class="msg">
-			<p>Please style your own headlines with the help of classes (e.g.: <code>.headline</code>, <code>.subline</code>) in the <em>project.less</em> file.</p>
+			<p>Please style your own headlines with the help of classes (e.g.: <code>.headline</code>, <code>.subline</code>) in your <em>style.less</em> file.</p>
+		</div>
+		<div class="msg msg-vWarn">
+			<p>Don't use a <code>h1</code> more than once whether <code>.headline</code> or <code>.subline</code>.</p>
 		</div>
 	</section>
 
 
 	<section class="section">
-		<h2 class="subline">Body text</h2>
+		<h2 class="headline">Body text</h2>
 		<p>This is an example of a body text. The first paragraph is emphasized with <code>.lead</code></p>
 		<div class="sandbox js-codeChild">
 			<p class="lead"><a class="has-footnote" href="#maecenas" id="maecenas-ref">Maecenas</a> sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi
@@ -45,16 +57,36 @@
 
 
 	<section class="section">
-		<h2 class="subline">Inline text elements</h2>
+		<h2 class="headline">Text Alignments</h2>
+		<p>You can change the text alignment of an element by adding <code>.txt-left</code>, <code>.txt-right</code>, <code>.txt-center</code> or <code>.txt-justify</code> to an element.</p>
+		<div class="sandbox js-codeChild">
+			<p class="txt-left"><strong>This text is left-aligned.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p class="txt-right"><strong>This text is right-aligned.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p class="txt-center"><strong>This text is center-aligned.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<p class="txt-justify"><strong>This text is justified.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+	</section>
+
+
+	<section class="section">
+		<h2 class="headline">Text Transformation</h2>
+		<p>You can change the text transform of an element by adding <code>.txt-lowercase</code>, <code>.txt-uppercase</code> or <code>.txt-capitalize</code> to an element.</p>
+		<div class="sandbox js-codeChild">
+			<p class="txt-lowercase">Lowercased text.</p>
+			<p class="txt-uppercase">Uppercased text.</p>
+			<p class="txt-capitalize">Capitalized text.</p>
+		</div>
+	</section>
+
+
+	<section class="section">
+		<h2 class="headline">Inline text elements</h2>
 		<p>This is an example of inline text elements.</p>
 		<div class="sandbox js-codeChild">
 			<p><strong>This line rendered as bold text.</strong></p>
 			<p><em>This line rendered as italicized text.</em></p>
 			<p>H<sub>2</sub>O, this is sub and super text<sup>2</sup>.</p>
-			<p>You can use the mark tag to
-				<mark>highlight</mark>
-				text.
-			</p>
+			<p>You can use the mark tag to <mark>highlight</mark> text.</p>
 			<p>
 				<del>This line of text is meant to be treated as deleted text.</del>
 			</p>
@@ -62,24 +94,45 @@
 				<ins>This line of text is meant to be treated as an addition to the document.</ins>
 			</p>
 			<p><small>This line of text is meant to be treated as fine print.</small></p>
-			<p><code>This line is pure code.</code></p>
+			<p>This line has an <code>inline code</code> element.</p>
+			<p>Press <kbd>ctrl</kbd> + <kbd>S</kbd> to save your document.</p>
+			<p>
+				Press <kbd class="kbd-vDark">ctrl</kbd> + <kbd class="kbd-vDark">N</kbd>
+				to create a new document.
+			</p>
 		</div>
 	</section>
 
 
 	<section class="section">
-		<h2 class="subline">Blockquote</h2>
+		<h2 class="headline">Block text elements</h2>
+		<p>This is an example of block text elements.</p>
+		<div class="sandbox js-codeChild">
+<pre>This Block is a pure Codeblock
+on multiple lines
+to represent code.</pre>
+		</div>
+	</section>
+
+
+	<section class="section">
+		<h2 class="headline">Blockquote</h2>
 		<p>This is an example of a blockquote.</p>
 		<div class="sandbox js-codeChild">
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+			<blockquote cite="https://groups.google.com/forum/#!original/comp.lang.perl.misc/5vPTrjRdnjY/88xwcrF5aA8J">
+				<p>Perl is worse than Python because people wanted it worse.</p>
+				<cite>
+					<a href="https://groups.google.com/forum/#!original/comp.lang.perl.misc/5vPTrjRdnjY/88xwcrF5aA8J">
+						Larry Wall - creator of the Perl programming language
+					</a>
+				</cite>
 			</blockquote>
 		</div>
 	</section>
 
 
 	<section class="section">
-		<h2 class="subline">Unordered Lists</h2>
+		<h2 class="headline">Unordered Lists</h2>
 		<p>Here is an example of an unordered list.</p>
 		<div class="sandbox js-codeChild">
 			<ul class="is-list">
@@ -101,7 +154,7 @@
 
 
 	<section class="section">
-		<h2 class="subline">Ordered List</h2>
+		<h2 class="headline">Ordered List</h2>
 		<p>Here is an example of an ordered list.</p>
 		<div class="sandbox js-codeChild">
 			<ol class="is-list">

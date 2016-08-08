@@ -6,7 +6,7 @@
 	<meta name="theme-color" content="#d00f1c">
 	<meta name="msapplication-TileColor" content="#d00f1c">
 
-	<title>VIUR Ignite Docs - Tooltips and Badges</title>
+	<title>VIUR Ignite Docs - Image</title>
 
 	<!-- description -->
 	<meta name="application-name" content="VIUR Ignite Docs">
@@ -75,7 +75,7 @@
 <li class="menu-item menu2-item"><a class="menu-link" href="forms.html">Forms</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="grid.html">Grid</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="helper.html">Helper</a></li>
-<li class="menu-item menu2-item"><a class="menu-link" href="image.html">Image</a></li>
+<li class="menu-item menu2-item"><a class="menu-link is-active" href="image.html">Image</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="boxes.html">Media Boxes</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="menus.html">Menu</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="pagination.html">Pagination</a></li>
@@ -86,87 +86,68 @@
 <li class="menu-item menu2-item"><a class="menu-link" href="spinner.html">Spinner</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="tables.html">Table</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="tabs.html">Tabs</a></li>
-<li class="menu-item menu2-item"><a class="menu-link is-active" href="badges.html">Tooltips and Badges</a></li>
+<li class="menu-item menu2-item"><a class="menu-link" href="badges.html">Tooltips and Badges</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="types.html">Typography</a></li>
 
 				</ul>
 			</div>
 			<div class="content">
 	<section class="section">
-		<h1 class="headline">Tooltips, Badges and Marker</h1>
+		<h1 class="headline">Image</h1>
 
-		<h2 class="headline">Tooltips</h2>
-		<p></p>
-
+		<h2 class="headline">Thumbnails</h2>
 		<div class="sandbox js-codeChild">
-			<span class="tip tip-w" aria-label="This is the tooltip.">
-			Text with a hover tooltip.</span>&nbsp;
-
-			<span class="tip tip-ne tip-vSticky tip-vSuccess" aria-label="This is the tooltip.">
-			Another Text with a sticky tooltip.</span>&nbsp;
-
-			<span class="tip tip-sw tip-vError" aria-label="This is the tooltip.">
-			Yet another Text with a tooltip.</span>
+			<div class="grid-row">
+				<div class="grid-col grid-col-one-third">
+					<figure class="thumbnail">
+						<img class="thumbnail-img" src="../static/images/placeholder.svg" alt="Image">
+					</figure>
+				</div>
+				<div class="grid-col grid-col-one-third">
+					<figure class="thumbnail">
+						<img class="thumbnail-img" src="../static/images/placeholder.svg" alt="Image">
+						<figcaption class="thumbnail-caption">
+							<h3 class="headline">Image with Caption</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="grid-col grid-col-one-third">
+					<a href="#">
+						<figure class="thumbnail">
+							<img class="thumbnail-img" src="../static/images/placeholder.svg" alt="Image">
+							<figcaption class="thumbnail-caption">
+								<h3 class="headline">Thumbnail with Link</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua.</p>
+							</figcaption>
+						</figure>
+					</a>
+				</div>
+			</div>
 		</div>
 	</section>
 
-
 	<section class="section">
-		<h2 class="headline">Badges</h2>
-		<p>
-		</p>
+		<h2 class="headline">Image Shaped</h2>
 		<div class="sandbox js-codeChild">
-			<h3 class="headline">Headline with reversed badge<span class="badge">7</span></h2>
-			<p>Some random text<span class="badge">7</span></p>
-			<button class="btn has-badge" data-badge="7">Any button</button>
-			<button class="btn btn-vSmall has-badge" data-badge="7">Any button</button>
+			<div class="grid-row">
+				<div class="grid-col grid-col-one-quarter">
+					<img class="img-rounded" src="../static/images/placeholder.svg" alt="Image">
+				</div>
+				<div class="grid-col grid-col-one-quarter">
+					<img class="img-circle" src="../static/images/placeholder.svg" alt="Image">
+				</div>
+				<div class="grid-col grid-col-one-quarter">
+					<img class="img-thumbnail" src="../static/images/placeholder.svg" alt="Image">
+				</div>
+				<div class="grid-col grid-col-one-quarter">
+					<img class="img-thumbnail has-caption" src="../static/images/placeholder.svg" alt="Image" title="Picture">
+				</div>
+			</div>
 		</div>
 	</section>
-
-
-	<section class="section">
-		<h2 class="headline">Inverse Badges</h2>
-		<p>
-		</p>
-		<div class="sandbox js-codeChild">
-			<h3 class="headline">Headline with reversed badge<span class="badge badge-vInverse">7</span></h2>
-			<p>Some random text<span class="badge badge-vInverse">7</span></p>
-			<button class="btn has-badge has-badge-vInverse" data-badge="7">Any button</button>
-			<button class="btn btn-vDanger has-badge has-badge-vInverse" data-badge="7">Any button</button>
-			<button class="btn btn-vSmall has-badge has-badge-vInverse" data-badge="7">Any button</button>
-			<button class="btn btn-vSmall btn-vPrimary has-badge has-badge-vInverse" data-badge="7">Any button</button>
-
-		</div>
-	</section>
-
-
-	<section class="section">
-		<h2 class="headline">Marker</h2>
-		<p>
-		</p>
-		<div class="sandbox js-codeChild">
-			Some random text <span class="marker">New</span> <br>
-			<button class="btn has-marker" aria-label="new">Any button</button>
-			<button class="btn btn-vSmall has-marker" aria-label="new">Any button</button>
-		</div>
-	</section>
-
-
-	<section class="section">
-		<h2 class="headline">Inverse Marker</h2>
-		<p>
-		</p>
-		<div class="sandbox js-codeChild">
-			<h3 class="headline">Headline with reversed marker<span class="marker marker-vInverse">New</span></h2>
-			Some random text <span class="marker marker-vInverse">New</span> <br>
-			<button class="btn has-marker has-marker-vInverse" aria-label="new">Any button</button>
-			<button class="btn btn-vDanger has-marker has-marker-vInverse" aria-label="danger">Do not press!</button>
-
-			<button class="btn btn-vSmall has-marker has-marker-vInverse" aria-label="new">Any button</button>
-			<button class="btn btn-vSmall btn-vEdit has-marker has-marker-vInverse" aria-label="edit">Any button</button>
-
-		</div>
-	</div>
 </div>
 
 		</div>

@@ -1,34 +1,25 @@
 <div class="content">
 	<section class="section">
 		<h1 class="headline">Getting Started</h1>
-	</section>
 
 
-	<section class="section">
-		<h2 class="subline">Dependencies</h2>
-
+		<h2 class="headline">Dependencies</h2>
 		<p>Before you continue, be sure that you have these tools installed on your machine:</p>
-		<div class="code">
-			NPM (https://www.npmjs.com)<br />
-			Git (https://git-scm.com)
-		</div>
+		<pre>NPM (https://www.npmjs.com)
+Git (https://git-scm.com)</pre>
 	</section>
 
 
 	<section class="section">
-		<h2 class="subline">Install</h2>
-
+		<h2 class="headline">Install</h2>
 		<p>Get the basic project from Github:</p>
-		<pre class="code">$ git clone git@github.com:viur-ignite/viur-ignite.git</pre>
+		<pre>$ git clone git@github.com:viur-ignite/viur-ignite.git</pre>
 
 		<p>Change into the ViUR ignite root directory:</p>
-		<pre class="code">$ cd &lt;viur-ignite root&gt;</pre>
+		<pre>$ cd &lt;viur-ignite root&gt;</pre>
 
-		<p>Install gulp and all dependencies:</p>
-		<pre class="code">$ npm install</pre>
-
-		<p>Initial the project with:</p>
-		<pre class="code">$ gulp init</pre>
+		<p>Install gulp global and all dependencies local and initial the project:</p>
+		<pre>$ npm run setup</pre>
 
 		<div class="msg msg-vSuccess has-icon i-check">
 			<h3 class="msg-headline">You did it!</h3>
@@ -38,7 +29,7 @@
 
 
 	<section class="section">
-		<h2 class="subline">Build your project</h2>
+		<h2 class="headline">Build your project</h2>
 		<div class="msg has-icon i-pen">
 		<h3 class="msg-headline">Folders and structure</h3>
 			<p>Your workspace is <code>/sources/</code>.<br>
@@ -69,13 +60,13 @@
 
 
 	<section class="section">
-		<h2 class="subline">... And Make it</h2>
+		<h2 class="headline">... And Make it</h2>
 
 		<p>Change back into the viur-ignite root directory:</p>
-		<pre class="code">$ cd &lt;viur-ignite root&gt;</pre>
+		<pre>$ cd &lt;viur-ignite root&gt;</pre>
 
 		<p>And run the gulp file to compile the appengine-folder:</p>
-		<pre class="code">$ gulp</pre>
+		<pre>$ gulp</pre>
 
 		<div class="msg msg-vWarn has-icon i-flash">
 			<h3 class="msg-headline">But be aware!</h3>
@@ -83,7 +74,7 @@
 		</div>
 
 		<p>You want only compile specific parts? No Problem! Run one of the following commands:</p>
-		<pre class="code">$ gulp html
+		<pre>$ gulp html
 $ gulp js
 $ gulp css
 $ gulp compress
