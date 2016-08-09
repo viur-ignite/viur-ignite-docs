@@ -1,8 +1,63 @@
 <div class="content section">
-	<h1 class="headline">Popups</h1>
+	<h1 class="headline has-marker" aria-label="JS">Popups</h1>
 	<p></p>
 
-	<div class="popup is-active">
+	<button class="js-open-new-popup">Create a new Popup</button>
+
+	<pre class="brush: html">
+		&lt;button class="js-open-new-popup"&gt;Create a new Popup&lt;/button&gt;
+
+		&lt;script&gt;
+			$(function() {
+				// popup on site call:
+				$('.popup').popup({
+					onOpen: function() {
+						console.info('opened popup');
+					},
+					onClose: function() {
+						console.info('closed popup');
+					}
+				});
+
+				// popup on button click:
+				$('.js-open-new-popup').on('click', function () {
+					$.createPopup({
+						title: 'Hello',
+						html: 'Message in a Popup',
+						footer: 'The footer',
+						button: [
+							{
+								title: 'BTN1',
+								class: 'bt1-class',
+								onClick: function() {
+									alert('You clicked button 1');
+								}
+							},
+							{
+								title:'BTN2',
+								class: 'bt2-class',
+								onClick: function() {
+									alert('You clicked button 2');
+								},
+								style: 'opacity: .5;'
+							},
+							{
+								html: '&lt;button class="btn" style="padding: 5px 15px;"&gt;Custom&lt;/button&gt;'
+							}
+						],
+						onOpen: function() {
+							console.info('opened new popup');
+						},
+						onClose: function() {
+							console.info('closed new popup');
+						}
+					});
+				});
+			});
+		&lt;/script&gt;
+	</pre>
+
+	<div class="popup">
 		<div class="popup-box">
 			<header class="popup-header">Popup Header </header>
 			<div class="popup-content">
@@ -16,15 +71,14 @@
 					<input class="input is-recommended" type="text" placeholder="Input">
 				</div>
 				<div class="formActions">
-					<a type="submit" class="btn btn-vPrimary" href="index.html">Submit</a>
-					<a type="reset" class="btn btn-vDanger" href="index.html">Reset</a>
+					<button type="submit" class="btn btn-vPrimary">Submit</button>
+					<button type="reset" class="btn btn-vDanger">Reset</button>
 				</div>
 			</div>
 			<footer class="popup-footer"></footer>
-			<a class="popup-close has-icon i-cross" href="index.html"></a>
+			<button class="popup-close has-icon i-cross"></a>
 		</div>
 	</div>
-
 </div>
 
-<div class="popup-overlay is-active"></div>
+<div class="popup-overlay"></div>

@@ -75,6 +75,31 @@ h1.headline {
   margin-right: 5px;
 }
 
+
+/**
+ * SUGGESTION BOX
+ */
+// #FIXME: move to ?
+.suggestion-box {
+  background-color: @menuBackgroundColor;
+  border: 1px solid darken(@menuBackgroundColor, 15%);
+  .shd;
+  position: absolute;
+}
+.suggestion-box-item {
+  font-size: .9em;
+  padding: .2em 1em;
+  &.is-active {
+    color: contrast(@mainColor);
+    background-color: @mainColor;
+  }
+  &:hover {
+    color: contrast(lighten(@mainColor, 20%));
+    background-color: lighten(@mainColor, 20%);
+    .pointer;
+  }
+}
+
 // => Projectspecific Media Queries
 
 .media-mixin(@break) when (@break = @breakSmall) {

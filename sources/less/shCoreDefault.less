@@ -7,13 +7,31 @@
  *
  * @version
  * 3.0.83 (July 02 2010)
- * 
+ *
  * @copyright
  * Copyright (C) 2004-2010 Alex Gorbatchev.
  *
  * @license
  * Dual licensed under the MIT and GPL licenses.
  */
+
+
+.syntaxhighlighter {
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  font-size: 1em;
+  background-color: darken(@backgroundColor,3%);
+  border: 1px solid lighten(@complementColor,40%);
+  padding: 20px;
+  margin: 1em 0;
+  border-radius: 0;
+}
+.sandbox + div > .syntaxhighlighter {
+  border-top-width: 0;
+  margin: -20px 0 20px;
+}
+
 .syntaxhighlighter a,
 .syntaxhighlighter div,
 .syntaxhighlighter code,
@@ -24,152 +42,130 @@
 .syntaxhighlighter table thead,
 .syntaxhighlighter table caption,
 .syntaxhighlighter textarea {
-	-moz-border-radius: 0 0 0 0 !important;
-	-webkit-border-radius: 0 0 0 0 !important;
-	background: none !important;
-	border: 0 !important;
-	bottom: auto !important;
-	float: none !important;
-	height: auto !important;
-	left: auto !important;
-	line-height: 1.1em !important;
-	margin: 0 !important;
-	outline: 0 !important;
-	overflow: visible !important;
-	padding: 0 !important;
-	position: static !important;
-	right: auto !important;
-	text-align: left !important;
-	top: auto !important;
-	vertical-align: baseline !important;
-	width: auto !important;
-	box-sizing: content-box !important;
-	font-family: @monoFonts !important;
-	font-weight: normal !important;
-	font-style: normal !important;
-	font-size: 1em !important;
-	min-height: inherit !important;
-	min-height: auto !important;
+	border-radius: 0;
+	background: none;
+	border: 0;
+	bottom: auto;
+	float: none;
+	height: auto;
+	left: auto;
+	line-height: 1.1em;
+	margin: 0;
+	outline: 0;
+	overflow: visible;
+	padding: 0;
+	position: static;
+	right: auto;
+	text-align: left;
+	top: auto;
+	vertical-align: baseline;
+	width: auto;
+	box-sizing: content-box;
+	font-family: @monoFonts;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1em;
+	min-height: inherit;
+	min-height: auto;
 }
 
-.syntaxhighlighter {
-	width: 100% !important;
-	margin: 1em 0 1em 0 !important;
-	position: relative !important;
-	overflow: auto !important;
-	font-size: 1em !important;
-}
-.syntaxhighlighter.source {
-	overflow: hidden !important;
-}
 .syntaxhighlighter .bold {
-	font-weight: bold !important;
+	font-weight: bold;
 }
 .syntaxhighlighter .italic {
-	font-style: italic !important;
+	font-style: italic;
 }
 .syntaxhighlighter .line {
-	white-space: pre !important;
+	white-space: pre;
 }
 .syntaxhighlighter table {
-	width: 100% !important;
+	width: 100%;
 }
 .syntaxhighlighter table caption {
-	text-align: left !important;
-	padding: .5em 0 0.5em 1em !important;
+	text-align: left;
+	padding: .5em 0 0.5em 1em;
 }
 .syntaxhighlighter table td.code {
-	width: 100% !important;
+	width: 100%;
 }
 .syntaxhighlighter table td.code .container {
-	position: relative !important;
+	position: relative;
 }
 .syntaxhighlighter table td.code .container textarea {
-	box-sizing: border-box !important;
-	position: absolute !important;
-	left: 0 !important;
-	top: 0 !important;
-	width: 100% !important;
-	height: 100% !important;
-	border: none !important;
-	background: white !important;
-	padding-left: 1em !important;
-	overflow: hidden !important;
-	white-space: pre !important;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	background: white;
+	padding-left: 1em;
+	overflow: hidden;
+	white-space: pre;
 }
 .syntaxhighlighter table td.code .line {
-	padding: 0 1em !important;
+	padding: 0 1em;
 }
 .syntaxhighlighter.nogutter td.code .container textarea, .syntaxhighlighter.nogutter td.code .line {
-	padding-left: 0em !important;
+	padding-left: 0em;
 }
 .syntaxhighlighter.show {
-	display: block !important;
-}
-
-.syntaxhighlighter {
-    background-color: darken(@backgroundColor,3%) !important;
-    border: 1px solid lighten(@complementColor,40%);
-    border-top-width: 0;
-    padding: 20px;
-    border-radius: 0;
-    margin: -20px 0 20px !important;
+	display: block;
 }
 .syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
-	background-color: #e0e0e0 !important;
+	background-color: #e0e0e0;
 }
 .syntaxhighlighter .line.highlighted.number {
-	color: black !important;
+	color: black;
 }
 .syntaxhighlighter table caption {
-	color: black !important;
+	color: black;
 }
 .syntaxhighlighter .toolbar {
-	display: none !important;
+	display: none;
 }
 .syntaxhighlighter .plain, .syntaxhighlighter .plain a {
-	color: #333 !important;
+	color: #333;
 }
 .syntaxhighlighter .comments, .syntaxhighlighter .comments a {
-	color: #21b64b !important;
+	color: #21b64b;
 }
 .syntaxhighlighter .string, .syntaxhighlighter .string a {
-	color: #d44950 !important;
+	color: #d44950;
 }
 .syntaxhighlighter .keyword {
-	color: #2f6f9f !important;
+	color: #2f6f9f;
 }
 .syntaxhighlighter .preprocessor {
-	color: gray !important;
+	color: gray;
 }
 .syntaxhighlighter .variable {
-	color: #aa7700 !important;
+	color: #aa7700;
 }
 .syntaxhighlighter .value {
-	color: #009900 !important;
+	color: #009900;
 }
 .syntaxhighlighter .functions {
-	color: #ff1493 !important;
+	color: #ff1493;
 }
 .syntaxhighlighter .constants {
-	color: #0066cc !important;
+	color: #0066cc;
 }
 .syntaxhighlighter .script {
-	font-weight: bold !important;
-	color: #006699 !important;
-	background-color: none !important;
+	font-weight: bold;
+	color: #006699;
+	background-color: none;
 }
 .syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
-	color: #4f9fcf !important;
+	color: #4f9fcf;
 }
 .syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
-	color: #ff1493 !important;
+	color: #ff1493;
 }
 .syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
-	color: red !important;
+	color: red;
 }
-
-
 
 .syntaxhighlighter code:before,
 .syntaxhighlighter code:after {
