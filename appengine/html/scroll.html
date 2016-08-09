@@ -6,7 +6,7 @@
 	<meta name="theme-color" content="#d00f1c">
 	<meta name="msapplication-TileColor" content="#d00f1c">
 
-	<title>VIUR Ignite Docs - Media Boxes</title>
+	<title>VIUR Ignite Docs - Scroller</title>
 
 	<!-- description -->
 	<meta name="application-name" content="VIUR Ignite Docs">
@@ -78,7 +78,7 @@
 <li class="menu-item menu2-item"><a class="menu-link" href="grid.html">Grid</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="helper.html">Helper</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="image.html">Image</a></li>
-<li class="menu-item menu2-item"><a class="menu-link is-active" href="boxes.html">Media Boxes</a></li>
+<li class="menu-item menu2-item"><a class="menu-link" href="boxes.html">Media Boxes</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="menus.html">Menu</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="pagination.html">Pagination</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="parallax.html">Parallax</a></li>
@@ -93,7 +93,7 @@
 				</ul>
 				<ul class="menu-list">
 					<li class="menu-item menu3-item"><a class="menu-link" href="popup.html">Popups</a></li>
-<li class="menu-item menu3-item"><a class="menu-link" href="scroll.html">Scroller</a></li>
+<li class="menu-item menu3-item"><a class="menu-link is-active" href="scroll.html">Scroller</a></li>
 <li class="menu-item menu3-item"><a class="menu-link" href="suggestions.html">Suggestions</a></li>
 <li class="menu-item menu3-item"><a class="menu-link" href="toggle.html">Toggler</a></li>
 
@@ -101,116 +101,106 @@
 			</div>
 			<div class="content">
 	<section class="section">
-		<h1 class="headline">Boxes</h1>
-		<p>Create a Media element e.g. for a forum or comments</p>
+		<h1 class="headline has-marker" aria-label="JS">Scroller</h1>
+		<p>Produce smooth scrolls.</p>
 
-		<h2 class="headline">Media</h2>
-		<div class="sandbox js-codeChild">
-			<div class="media">
-				<div class="media-image" style="background-image: url('../static/images/placeholder.svg');"></div>
-				<div class="media-content">
-					<h2 class="headline">Headline</h2>
-					<p class="media-descr">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-				</div>
-			</div>
+		<div class="sandbox">
+			<h2 class="headline">ScrollToAnchor</h2>
+			<p><a href="#div1">Paragraph 1</a></p>
+			<p><a onclick="$('#div2').scrollTo();">Paragraph 2</a></p>
+			<p><a class="pointer" data-scroll-target="#div3" data-scroll-speed="3000">Paragraph 3</a></p>
+
+			<h3 class="headline">Paragraph 1</h3>
+			<p id="div1">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+			<h3 class="headline">Paragraph 2</h3>
+			<p id="div2">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+			<h3 class="headline">Paragraph 3</h3>
+			<p id="div3">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
 		</div>
-	</section>
 
+		<pre class="brush: html">
+			&lt;p&gt;&lt;a href="#div1"&gt;Paragraph 1&lt;/a&gt;&lt;/p&gt;
+			&lt;p&gt;&lt;a onclick="$('#div2').scrollto();"&gt;Paragraph 2&lt;/a&gt;&lt;/p&gt;
+			&lt;p&gt;&lt;a class="pointer" data-scroll-target="#div3" data-scroll-speed="3000"&gt;
+				Paragraph 3
+			&lt;/a&gt;&lt;/p&gt;
 
-	<section class="section">
-		<h2 class="headline">Media Nesting</h2>
-		<div class="sandbox js-codeChild">
-			<div class="media">
-				<div class="media-image media-image-vSmall" style="background-image: url('../static/images/placeholder.svg');"></div>
-				<div class="media-content">
-					<h4 class="headline">Headline</h4>
-					<p class="media-descr">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-					<div class="media">
-						<div class="media-image media-image-vSmall" style="background-image: url('../static/images/placeholder.svg');"></div>
-						<div class="media-content">
-							<h4 class="headline">Headline</h4>
-							<p class="media-descr">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<div class="media">
-								<div class="media-image media-image-vSmall" style="background-image: url('../static/images/placeholder.svg');"></div>
-								<div class="media-content">
-									<h4 class="headline">Headline</h4>
-									<p class="media-descr">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-									</p>
-									<div class="media">
-										<div class="media-image media-image-vSmall" style="background-image: url('../static/images/placeholder.svg');"></div>
-										<div class="media-content">
-											<h4 class="headline">Headline</h4>
-											<p class="media-descr">
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-												tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-												quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-												consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-												cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-												proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="media">
-								<div class="media-image media-image-vSmall" style="background-image: url('../static/images/placeholder.svg');"></div>
-								<div class="media-content">
-									<h4 class="headline">Headline</h4>
-									<p class="media-descr">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="media">
-						<div class="media-image media-image-vSmall" style="background-image: url('../static/images/placeholder.svg');"></div>
-						<div class="media-content">
-							<h4 class="headline">Headline</h4>
-							<p class="media-descr">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			&lt;h3 class="headline"&gt;Paragraph 1&lt;/h3&gt;
+			&lt;p id="div1"&gt;
+				Lorem ipsum ...
+			&lt;/p&gt;
+
+			&lt;h3 class="headline"&gt;Paragraph 2&lt;/h3&gt;
+			&lt;p id="div2"&gt;
+				Lorem ipsum ...
+			&lt;/p&gt;
+
+			&lt;h3 class="headline"&gt;Paragraph 3&lt;/h3&gt;
+			&lt;p id="div3"&gt;
+				Lorem ipsum ...
+			&lt;/p&gt;
+
+			&lt;script&gt;
+				$(function() {
+					// active smooth scroll on all links with href="#..."
+					// and log the status in the console
+					$('a[href^="#"]').scrollAnchor({
+						speed: 900,
+						onScrollStart: function() {
+							console.info('started scroll');
+						},
+						onScrollEnd: function() {
+							console.info('finished scroll');
+						}
+					});
+				})
+			&lt;/script&gt;
+		</pre>
+
+		<div class="msg msg-vWarn has-icon i-flash">
+			<h3 class="msg-headline">Fallback!</h3>
+			<p>It's recommend to set always href="#..." as fallback if JavaScript is disabled.</p>
 		</div>
 	</section>
 </div>

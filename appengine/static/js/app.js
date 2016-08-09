@@ -34,7 +34,7 @@ function formatBytes (bytes, decimals) {
  */
 $(function() {
 	// scroll to an element
-	$.fn.scrollto = function (options) {
+	$.fn.scrollTo = function (options) {
 		options = $.extend({
 			speed: 1000,
 			easing: 'swing',
@@ -85,7 +85,7 @@ $(function() {
 			else
 				return console.error('No Scroll Target');
 
-			return $(target).scrollto(options);
+			return $(target).scrollTo(options);
 		});
 	};
 
@@ -103,7 +103,7 @@ $(function() {
 		if (typeof speed != 'undefined') options.speed = speed;
 		if (typeof easing != 'undefined') options.easing = easing;
 
-		$target.scrollto(options);
+		$target.scrollTo(options);
 	});
 
 
@@ -117,7 +117,6 @@ $(function() {
 		}, options);
 
 		if (! $(this).elementExist() ) {
-			console.error('element doesnt exist');
 			return false;
 		}
 
@@ -150,7 +149,7 @@ $(function() {
 	$.createPopup = function (options) {
 		options = $.extend({
 			title: 'VIUR Popup',
-			content: 'This is a VIUR popup',
+			html: 'This is a VIUR popup',
 			footer: '',
 			button: [
 				{title:'Close', class: 'popup-close'}
@@ -172,8 +171,8 @@ $(function() {
 			options.button.forEach(function (val, index) {
 				if (typeof options.button[index].onClick === 'undefined') options.button[index].onClick = $.noop;
 
-				if(!!val.custom) {
-					button += val.custom;
+				if(!!val.html) {
+					button += val.html;
 				} else {
 					button += __getButtonPrototype()
 						.replace('{{class}}', !!val.class ? val.class : '')
@@ -186,7 +185,7 @@ $(function() {
 
 		var popup = __getPopupPrototype()
 			.replace('{{header}}', options.title)
-			.replace('{{content}}', options.content)
+			.replace('{{content}}', options.html)
 			.replace('{{button}}', button)
 			.replace('{{footer}}', options.footer);
 
@@ -246,7 +245,7 @@ $(function() {
 			type: 'data', // type: url or data
 			caseSensitive: false,
 			onSelect: $.noop, // after select
-			onType: $.noop // ^= keyup
+			onType: $.noop // ^= keydown
 		}, options);
 
 		var $elements = $(this);
@@ -292,6 +291,7 @@ $(function() {
 							var text = $suggestionBox.find('.suggestion-box-item.is-active').text();
 							$element.val(text);
 							$suggestionBox.hide();
+							options.onSelect.call(null, this, null);
 							break;
 
 						default:
@@ -300,6 +300,8 @@ $(function() {
 							moveIndex = 0; // reset moveIndex for new suggestions
 							break;
 					}
+
+					options.onType.call(null, this, null);
 				});
 			});
 		}
@@ -337,7 +339,7 @@ $(function() {
 					$.ajax({
 						url: options.url,
 						data: {q: q},
-						async: false, // Its deprecated, but sync ajax sucks
+						async: false, // Its deprecated, but async ajax sucks
 						dataType: 'json',
 						success: function (response) {
 							arr = response;
@@ -391,17 +393,16 @@ $(function() {
 	};
 })
 
+SyntaxHighlighter.defaults['gutter'] = false;
+SyntaxHighlighter.highlight()
+
 $(function() {
 	$.fn.outerHTML = function(s) {
 		return (s)
 			? this.before(s).remove()
 			: $('<p>').append(this.eq(0).clone()).html();
 	}
-})
 
-
-SyntaxHighlighter.defaults['gutter'] = false;
-$(function() {
 	$('.js-codeMe').each(function() {
 		var html = $(this).outerHTML().replace(' js-codeMe', '').replace('js-codeMe', '').replace(' class=""', '').replace('class=""', '');
 		var escaped = $("<div>").text(html).html();
@@ -432,46 +433,7 @@ $(function() {
 		SyntaxHighlighter.highlight()
 	})
 
-
-	$('a[href^="#"]').scrollAnchor({
-		speed: 900,
-		onScrollStart: function() {
-			console.info('started scroll');
-		},
-		onScrollEnd: function() {
-			console.info('finished scroll');
-		}
-	});
-
-
-	$('.popup').popup({
-		onOpen: function() {
-			console.info('opened popup');
-		},
-		onClose: function() {
-			console.info('closed popup');
-		}
-	});
-
-	$('.open-popup').on('click', function () {
-		$.createPopup({
-			title: 'MESSAGE',
-			content: 'THIS IS A MESSAGE',
-			footer: 'THE FOOTER',
-			button: [
-				{title:'BTN1', class: 'bt1-class', onClick: function(){console.debug('clicked btn1');}},
-				{title:'BTN2', class: 'bt2-class', onClick: function(){console.debug('clicked btn2');}, style: 'opacity: .5;'},
-				{custom: '<button class="btn" style="padding:5px 15px;">mybutton</button>'}
-			],
-			onOpen: function() {
-				console.info('opened new popup');
-			},
-			onClose: function() {
-				console.info('closed new popup');
-			}
-		});
-	});
-
+	// DEMOS:
 	$('.js-suggestions').suggestions({
 		data: [
 			'Green',
@@ -512,9 +474,59 @@ $(function() {
 			'DarkBlue',
 			'ForestGreen',
 			'Brown'
-		],
-		//url: '../../mein.json',
-		//type: 'url'
-		// searchType: 'startWith'
-	})
-});
+		]
+	});
+
+	$('.sandbox a[href^="#"]').scrollAnchor({
+		speed: 900,
+		onScrollStart: function() {
+			console.info('started scroll');
+		},
+		onScrollEnd: function() {
+			console.info('finished scroll');
+		}
+	});
+
+	$('.popup').popup({
+		onOpen: function() {
+			console.info('opened popup');
+		},
+		onClose: function() {
+			console.info('closed popup');
+		}
+	});
+
+	$('.js-open-new-popup').on('click', function () {
+		$.createPopup({
+			title: 'Hello',
+			html: 'Message in a Popup',
+			footer: 'The footer',
+			button: [
+				{
+					title: 'BTN1',
+					class: 'bt1-class',
+					onClick: function() {
+						alert('You clicked button 1');
+					}
+				},
+				{
+					title:'BTN2',
+					class: 'bt2-class',
+					onClick: function() {
+						alert('You clicked button 2');
+					},
+					style: 'opacity: .5;'
+				},
+				{
+					html: '<button class="btn" style="padding: 5px 15px;">Custom</button>'
+				}
+			],
+			onOpen: function() {
+				console.info('opened new popup');
+			},
+			onClose: function() {
+				console.info('closed new popup');
+			}
+		});
+	});
+})

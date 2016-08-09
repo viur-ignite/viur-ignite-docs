@@ -82,7 +82,6 @@
 <li class="menu-item menu2-item"><a class="menu-link" href="menus.html">Menu</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="pagination.html">Pagination</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="parallax.html">Parallax</a></li>
-<li class="menu-item menu2-item"><a class="menu-link is-active" href="popup.html">Popups</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="progress.html">Progressbar</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="slider.html">Slider</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="spinner.html">Spinner</a></li>
@@ -93,14 +92,71 @@
 
 				</ul>
 				<ul class="menu-list">
-					<li class="menu-item menu3-item"><a class="menu-link" href="js.html">JS</a></li>
-<li class="menu-item menu3-item"><a class="menu-link" href="js2.html">JS 2</a></li>
+					<li class="menu-item menu3-item"><a class="menu-link is-active" href="popup.html">Popups</a></li>
+<li class="menu-item menu3-item"><a class="menu-link" href="scroll.html">Scroller</a></li>
+<li class="menu-item menu3-item"><a class="menu-link" href="suggestions.html">Suggestions</a></li>
+<li class="menu-item menu3-item"><a class="menu-link" href="toggle.html">Toggler</a></li>
 
 				</ul>
 			</div>
 			<div class="content section">
-	<h1 class="headline">Popups</h1>
+	<h1 class="headline has-marker" aria-label="JS">Popups</h1>
 	<p></p>
+
+	<button class="js-open-new-popup">Create a new Popup</button>
+
+	<pre class="brush: html">
+		&lt;button class="js-open-new-popup"&gt;Create a new Popup&lt;/button&gt;
+
+		&lt;script&gt;
+			$(function() {
+				// popup on site call:
+				$('.popup').popup({
+					onOpen: function() {
+						console.info('opened popup');
+					},
+					onClose: function() {
+						console.info('closed popup');
+					}
+				});
+
+				// popup on button click:
+				$('.js-open-new-popup').on('click', function () {
+					$.createPopup({
+						title: 'Hello',
+						html: 'Message in a Popup',
+						footer: 'The footer',
+						button: [
+							{
+								title: 'BTN1',
+								class: 'bt1-class',
+								onClick: function() {
+									alert('You clicked button 1');
+								}
+							},
+							{
+								title:'BTN2',
+								class: 'bt2-class',
+								onClick: function() {
+									alert('You clicked button 2');
+								},
+								style: 'opacity: .5;'
+							},
+							{
+								html: '&lt;button class="btn" style="padding: 5px 15px;"&gt;Custom&lt;/button&gt;'
+							}
+						],
+						onOpen: function() {
+							console.info('opened new popup');
+						},
+						onClose: function() {
+							console.info('closed new popup');
+						}
+					});
+				});
+			});
+		&lt;/script&gt;
+	</pre>
 
 	<div class="popup">
 		<div class="popup-box">
@@ -116,15 +172,14 @@
 					<input class="input is-recommended" type="text" placeholder="Input">
 				</div>
 				<div class="formActions">
-					<input type="submit" class="btn btn-vPrimary" value="Submit">
-					<input type="reset" class="btn btn-vDanger" value="Reset">
+					<button type="submit" class="btn btn-vPrimary">Submit</button>
+					<button type="reset" class="btn btn-vDanger">Reset</button>
 				</div>
 			</div>
 			<footer class="popup-footer"></footer>
-			<button class="popup-close has-icon i-cross"></button>
+			<button class="popup-close has-icon i-cross"></a>
 		</div>
 	</div>
-
 </div>
 
 <div class="popup-overlay"></div>

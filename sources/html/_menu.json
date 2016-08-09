@@ -14,7 +14,6 @@
 		"grid.html" : "Grid",
 		"buttons.html" : "Buttons",
 		"parallax.html" : "Parallax",
-		"popup.html" : "Popups",
 		"spinner.html" : "Spinner",
 		"progress.html" : "Progressbar",
 		"tables.html" : "Table",
@@ -28,8 +27,10 @@
 		"helper.html" : "Helper",
 		"bar.html" : "Bar"
 	},
-	"menu3_Static": {
-		"js.html" : "JS",
-		"js2.html" : "JS 2"
+	"menu3_Sort": {
+		"suggestions.html": "Suggestions",
+		"scroll.html": "Scroller",
+		"popup.html" : "Popups",
+		"toggle.html": "Toggler"
 	}
 }
