@@ -5118,6 +5118,32 @@ h1.headline {
   display: inline-block;
   margin-right: 5px;
 }
+/**
+ * SUGGESTION BOX
+ */
+.suggestion-box {
+  background-color: #f4f4f4;
+  border: 1px solid #cecece;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  position: absolute;
+}
+
+.suggestion-box-item {
+  font-size: .9em;
+  padding: .2em 1em;
+}
+
+.suggestion-box-item.is-active {
+  color: #ffffff;
+  background-color: #d00f1c;
+}
+
+.suggestion-box-item:hover,
+.suggestion-box-item:focus {
+  color: #000000;
+  background-color: #f3525d;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 1100px) {
   .popup {

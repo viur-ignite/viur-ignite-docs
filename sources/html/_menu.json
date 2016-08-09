@@ -29,6 +29,7 @@
 		"bar.html" : "Bar"
 	},
 	"menu3_Static": {
-		"js.html" : "JS"
+		"js.html" : "JS",
+		"js2.html" : "JS 2"
 	}
 }

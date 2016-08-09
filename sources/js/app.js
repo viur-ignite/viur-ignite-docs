@@ -66,8 +66,8 @@ $(function() {
 			content: 'THIS IS A MESSAGE',
 			footer: 'THE FOOTER',
 			button: [
-				{title:'BTN1', class: "bt1-class", onClick: function(){console.debug('clicked btn1');}},
-				{title:'BTN2', class: "bt2-class", onClick: function(){console.debug('clicked btn2');}, style: 'opacity: .5;'},
+				{title:'BTN1', class: 'bt1-class', onClick: function(){console.debug('clicked btn1');}},
+				{title:'BTN2', class: 'bt2-class', onClick: function(){console.debug('clicked btn2');}, style: 'opacity: .5;'},
 				{custom: '<button class="btn" style="padding:5px 15px;">mybutton</button>'}
 			],
 			onOpen: function() {
@@ -78,4 +78,50 @@ $(function() {
 			}
 		});
 	});
+
+	$('.js-suggestions').suggestions({
+		data: [
+			'Green',
+			'GoldenRod',
+			'Coral',
+			'DodgerBlue',
+			'DarkSeaGreen',
+			'GhostWhite',
+			'Chocolate',
+			'Gray',
+			'Blue',
+			'Grey',
+			'DeepPink',
+			'DarkGrey',
+			'DarkGray',
+			'Gold',
+			'Orange ',
+			'CadetBlue',
+			'DarkCyan',
+			'DarkSalmon',
+			'Crimson',
+			'BurlyWood',
+			'DarkViolet',
+			'Fuchsia',
+			'Cornsilk',
+			'CornflowerBlue',
+			'FloralWhite',
+			'DimGrey',
+			'PeachPuff',
+			'DarkOrange',
+			'Cyan',
+			'Gainsboro',
+			'Chartreuse',
+			'DimGray',
+			'FireBrick',
+			'DeepSkyBlue',
+			'DarkKhaki',
+			'DarkBlue',
+			'ForestGreen',
+			'Brown'
+		],
+		//url: '../../mein.json',
+		//type: 'url'
+		// searchType: 'startWith'
+	})
 });
