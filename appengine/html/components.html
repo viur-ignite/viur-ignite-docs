@@ -6,7 +6,7 @@
 	<meta name="theme-color" content="#d00f1c">
 	<meta name="msapplication-TileColor" content="#d00f1c">
 
-	<title>VIUR Ignite Docs - Start</title>
+	<title>VIUR Ignite Docs - Components</title>
 
 	<!-- description -->
 	<meta name="application-name" content="VIUR Ignite Docs">
@@ -62,9 +62,9 @@
 			<label for="nav-trigger"></label>
 			<div class="sidebar menuWrapper">
 				<ul class="menu-list">
-					<li class="menu-item menu1-item"><a class="menu-link is-primary is-active" href="index.html">Start</a></li>
+					<li class="menu-item menu1-item"><a class="menu-link is-primary" href="index.html">Start</a></li>
 <li class="menu-item menu1-item"><a class="menu-link" href="gettingStarted.html">Getting Started</a></li>
-<li class="menu-item menu1-item"><a class="menu-link" href="components.html">Components</a></li>
+<li class="menu-item menu1-item"><a class="menu-link is-active" href="components.html">Components</a></li>
 <li class="menu-item menu1-item"><a class="menu-link" href="states.html">States</a></li>
 <li class="menu-item menu1-item"><a class="menu-link" href="variables.html">Variables/Settings</a></li>
 
@@ -99,53 +99,68 @@
 			</div>
 			<div class="content">
 	<section class="section">
-		<h1 class="headline">VIUR Ignite CSS</h1>
-
-		<div style="margin: 16px 0;">
-			<a class="github-button" href="https://github.com/viur-ignite/viur-ignite-css" data-style="mega" data-count-href="/viur-ignite/viur-ignite-css/watchers" data-count-api="/repos/viur-ignite/viur-ignite-css#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch viur-ignite/viur-ignite-css on GitHub">Watch</a>
-			<a class="github-button" href="https://github.com/viur-ignite/viur-ignite-css" data-style="mega" data-count-href="/viur-ignite/viur-ignite-css/stargazers" data-count-api="/repos/viur-ignite/viur-ignite-css#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star viur-ignite/viur-ignite-css on GitHub">Star</a>
-		</div>
-
-		<p>This is the first attempt in building a sturdy foundation of CSS (LESS) for <a href="http://www.viur.is">ViUR</a> products and <a href="https://www.mausbrand.de">Mausbrand</a> projects.
-		ViUR Ignite CSS is built upon the principles of many CSS guides and frameworks.</p>
-
-		<p>Different projects demand different solutions.<br />
-		ViUR Ignite CSS is a solution based on the needs of our python/jinja oriented stack.<br />
-		A lightweight framework for many different customer projects.<br />
-		For other purposes you may use one of the frameworks or guides below.<br />
-		Their samples, knowledge and expertise helped us to make ViUR Ignite CSS.</p>
-
+		<h1 class="headline">Components</h1>
+		<pre>.componentName</pre>
+		<p>
+			ViUR Ignite CSS is a libary of different interface components.
+			Components are self-contained objects.
+			You can think of components as custom elements that enclose specific semantics, styling, and behaviour.
+			Every component is stored in its LESS file — <code>button.less</code>, <code>tooltip.less</code> etc.
+			All LESS files are catagolized in the <code>viur.less</code>.
+		</p>
+		<p>Component driven development offers several benefits when reading and writing HTML and CSS:</p>
 		<ul class="is-list">
-			<li><a href="http://primercss.io">Primer CSS</a></li>
-			<li><a href="https://benfrain.com/enduring-css-writing-style-sheets-rapidly-changing-long-lived-projects/">Enduring CSS</a></li>
-			<li><a href="http://bulma.io">Bulma</a></li>
-			<li><a href="http://cssguidelin.es">CSS Guidelin.es</a></li>
-			<li><a href="http://andhart.github.io/bijou">Bijou</a></li>
-			<li><a href="https://github.com/jscarmona/bedrock">Bedrock</a></li>
-			<li>and others</li>
+			<li>It helps to distinguish between the classes for the root of the component, descendant elements, and modifications.</li>
+			<li>It keeps the specificity of selectors low.</li>
+			<li>It helps to decouple presentation semantics from document semantics.</li>
 		</ul>
+		<p>Every component has to create its own namespace to seperate its enclosed specifics from the rest of the page, like <code>.menu-</code> or <code>.footer-</code>.
+			Namespacing should be made at a descriptive, functional level.
 
-		<p>Thanks guys!</p>
+		<h2 class="headline">Page styling</h2>
+		<p>
+			Prefer components over page level styles.
+			Pages should largely be reusing the general component level styles, such as <code>.btn</code> or <code>.wrap</code>.
+			Page level name-spaces however can be helpful for overriding generic components in very specific contexts.
+			Page level overrides should be minimal and under a single page level class nest.
+		</p>
 
+		<h2 class="headline">Nesting</h2>
+		<p>
+			Avoid nesting whenever possible.
+			Nesting makes it harder to tell at a glance where css selector optimizations can be made.
+			Although in the name (cascading style sheets) cascading can introduce unnecessary performance overhead for applying styles.
+		</p>
 
-		<h3 class="headline">What is this repository for?</h3>
+		<h2 clasS="headline">Component parts</h2>
+		<pre>.componentName-partName</pre>
+		<p>
+			A component part is a class that is attached to a descendant node of a component.
+			It's responsible for applying presentation directly to the descendant on behalf of a particular component.
+		</p>
+
+		<h2 class="headline">Component variation</h2>
+		<pre>.componentName-vVariationName</pre>
+		<p>
+			A component variation is a class that modifies the presentation of the base component in some form, e.g. color, direction or size.
+			The class should be included in the HTML <strong>in addition</strong> to the base component class.
+		</p>
+
+		<h2 class="headline">Syntax</h2>
 		<ul class="is-list">
-			<li>ViUR Ignite CSS is a development toolkit for sturdy HTML and CSS</li>
-			<li>It is a lightweightned collection of helpful CSS components</li>
-			<li>It is responsive and adaptable</li>
-			<li>It is build in LESS</li>
-			<li>ViUR Ignite CSS is JavaScript free as most projects use their own JS implementation.</li>
+			<li>Components, component parts and component variations are writen in lowerCamelCase.</li>
+			<li>Component parts are seperated by a hyphen.</li>
+			<li>Component variation names are separated from the component name by a hyphen and a small v.</li>
 		</ul>
-
 	</section>
 	<section class="section">
 		<nav class="bar">
-			<div class="barGroup-vRight"><a class="btn btn-vSmall" href="gettingStarted.html">Next: Getting Started</a></div>
+			<div class="barGroup-vLeft"><a class="btn btn-vSmall" href="gettingStarted.html">Previous: Getting Started</a></div>
+			<div class="barGroup-vRight"><a class="btn btn-vSmall" href="states.html">Next: States</a></div>
 		</nav>
 	</section>
 </div>
 
-<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 		</div>
 	</div>
