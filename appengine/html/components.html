@@ -6,7 +6,7 @@
 	<meta name="theme-color" content="#d00f1c">
 	<meta name="msapplication-TileColor" content="#d00f1c">
 
-	<title>VIUR Ignite Docs - Popups</title>
+	<title>VIUR Ignite Docs - Components</title>
 
 	<!-- description -->
 	<meta name="application-name" content="VIUR Ignite Docs">
@@ -64,7 +64,7 @@
 				<ul class="menu-list">
 					<li class="menu-item menu1-item"><a class="menu-link is-primary" href="index.html">Start</a></li>
 <li class="menu-item menu1-item"><a class="menu-link" href="gettingStarted.html">Getting Started</a></li>
-<li class="menu-item menu1-item"><a class="menu-link" href="components.html">Components</a></li>
+<li class="menu-item menu1-item"><a class="menu-link is-active" href="components.html">Components</a></li>
 <li class="menu-item menu1-item"><a class="menu-link" href="states.html">States</a></li>
 <li class="menu-item menu1-item"><a class="menu-link" href="variables.html">Variables/Settings</a></li>
 
@@ -82,7 +82,7 @@
 <li class="menu-item menu2-item"><a class="menu-link" href="menus.html">Menu</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="pagination.html">Pagination</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="parallax.html">Parallax</a></li>
-<li class="menu-item menu2-item"><a class="menu-link is-active" href="popup.html">Popups</a></li>
+<li class="menu-item menu2-item"><a class="menu-link" href="popup.html">Popups</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="progress.html">Progressbar</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="slider.html">Slider</a></li>
 <li class="menu-item menu2-item"><a class="menu-link" href="spinner.html">Spinner</a></li>
@@ -93,36 +93,71 @@
 
 				</ul>
 			</div>
-			<div class="content section">
-	<h1 class="headline">Popups</h1>
-	<p></p>
+			<div class="content">
+	<section class="section">
+		<h1 class="headline">Components</h1>
+		<pre>.componentName</pre>
+		<p>
+			ViUR Ignite CSS is a libary of different interface components.
+			Components are self-contained objects.
+			You can think of components as custom elements that enclose specific semantics, styling, and behaviour.
+			Every component is stored in its LESS file — <code>button.less</code>, <code>tooltip.less</code> etc.
+			All LESS files are catagolized in the <code>viur.less</code>.
+		</p>
+		<p>Component driven development offers several benefits when reading and writing HTML and CSS:</p>
+		<ul class="is-list">
+			<li>It helps to distinguish between the classes for the root of the component, descendant elements, and modifications.</li>
+			<li>It keeps the specificity of selectors low.</li>
+			<li>It helps to decouple presentation semantics from document semantics.</li>
+		</ul>
+		<p>Every component has to create its own namespace to seperate its enclosed specifics from the rest of the page, like <code>.menu-</code> or <code>.footer-</code>.
+			Namespacing should be made at a descriptive, functional level.
 
-	<div class="popup is-active">
-		<div class="popup-box">
-			<header class="popup-header">Popup Header </header>
-			<div class="popup-content">
-				<p>Oh, a popup! Something happend!</p>
-				<div class="msg msg-vPopup msg-vWarn has-icon i-flash">
-					<h3 class="msg-headline">Achtung!</h3>
-					<p>This is a warning.</p>
-				</div>
-				<div class="inputGroup inputGroup-vPopup">
-					<label class="label is-recommended">Label</label>
-					<input class="input is-recommended" type="text" placeholder="Input">
-				</div>
-				<div class="formActions">
-					<a type="submit" class="btn btn-vPrimary" href="index.html">Submit</a>
-					<a type="reset" class="btn btn-vDanger" href="index.html">Reset</a>
-				</div>
-			</div>
-			<footer class="popup-footer"></footer>
-			<a class="popup-close has-icon i-cross" href="index.html"></a>
-		</div>
-	</div>
+		<h2 class="headline">Page styling</h2>
+		<p>
+			Prefer components over page level styles.
+			Pages should largely be reusing the general component level styles, such as <code>.btn</code> or <code>.wrap</code>.
+			Page level name-spaces however can be helpful for overriding generic components in very specific contexts.
+			Page level overrides should be minimal and under a single page level class nest.
+		</p>
 
+		<h2 class="headline">Nesting</h2>
+		<p>
+			Avoid nesting whenever possible.
+			Nesting makes it harder to tell at a glance where css selector optimizations can be made.
+			Although in the name (cascading style sheets) cascading can introduce unnecessary performance overhead for applying styles.
+		</p>
+
+		<h2 clasS="headline">Component parts</h2>
+		<pre>.componentName-partName</pre>
+		<p>
+			A component part is a class that is attached to a descendant node of a component.
+			It's responsible for applying presentation directly to the descendant on behalf of a particular component.
+		</p>
+
+		<h2 class="headline">Component variation</h2>
+		<pre>.componentName-vVariationName</pre>
+		<p>
+			A component variation is a class that modifies the presentation of the base component in some form, e.g. color, direction or size.
+			The class should be included in the HTML <strong>in addition</strong> to the base component class.
+		</p>
+
+		<h2 class="headline">Syntax</h2>
+		<ul class="is-list">
+			<li>Components, component parts and component variations are writen in lowerCamelCase.</li>
+			<li>Component parts are seperated by a hyphen.</li>
+			<li>Component variation names are separated from the component name by a hyphen and a small v.</li>
+		</ul>
+	</section>
+	<section class="section">
+		<nav class="bar">
+			<div class="barGroup-vLeft"><a class="btn btn-vSmall" href="gettingStarted.html">Previous: Getting Started</a></div>
+			<div class="barGroup-vRight"><a class="btn btn-vSmall" href="states.html">Next: States</a></div>
+		</nav>
+	</section>
 </div>
 
-<div class="popup-overlay is-active"></div>
+
 		</div>
 	</div>
 
