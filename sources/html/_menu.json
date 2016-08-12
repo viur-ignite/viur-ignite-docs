@@ -2,6 +2,7 @@
 	"menu1_Static": {
 		"index.html_Primary" : "Start",
 		"gettingStarted.html" : "Getting Started",
+		"guidelines.html" : "Guidelines",
 		"components.html" : "Components",
 		"states.html" : "States",
 		"variables.html" : "Variables/Settings"
